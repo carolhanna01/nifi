@@ -51,8 +51,9 @@ import org.apache.nifi.scheduling.ExecutionNode;
 import org.apache.nifi.ssl.RestrictedSSLContextService;
 import org.apache.nifi.ssl.SSLContextService;
 import org.apache.nifi.stream.io.StreamUtils;
-import org.eclipse.jetty.ee10.servlet.ServletContextHandler;
 import org.eclipse.jetty.ee10.servlet.ServletContextRequest;
+import org.eclipse.jetty.ee10.servlet.ServletHandler;
+import org.eclipse.jetty.ee10.servlet.ServletHolder;
 import org.eclipse.jetty.server.Connector;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.ServerConnector;
@@ -484,9 +485,8 @@ public class HandleHttpRequest extends AbstractProcessor {
                 }
             }
         };
-        final ServletContextHandler handler = new ServletContextHandler();
-        handler.addServlet(standardServlet, "/");
-        server.setHandler(handler);
+        final ServletHandler servletHandler = new ServletHandler();
+        servletHandler.addServlet(new ServletHolder(standardServlet));
 
         this.server = server;
         server.start();
