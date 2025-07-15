@@ -1,0 +1,194 @@
+rss:
+  '@version': '0.92'
+  channel:
+    build-info:
+      build-date: 22-06-2022
+      build-number: '820010'
+      version: 8.20.10
+    description: This file is an XML representation of an issue
+    item:
+      aggregateprogress:
+        '@percentage': '100'
+        currentProgress:
+          row:
+          - '@backgroundColor': '#51a825'
+            '@percentage': '100'
+          - '@backgroundColor': '#ec8e00'
+            '@percentage': '0'
+        originalProgress:
+          row:
+          - '@backgroundColor': '#89afd7'
+            '@percentage': '0'
+          - '@backgroundColor': transparent
+            '@percentage': '100'
+      assignee:
+        '#text': David Handermann
+        '@username': exceptionfactory
+      attachments: null
+      comments:
+        comment:
+        - '#text': "<p>Commit d5c7fcb5ddeb663ac207f726a0c3dc8f80d05d3e in nifi's branch\
+            \ refs/heads/main from David Handermann<br/>\n[ <a href=\"https://gitbox.apache.org/repos/asf?p=nifi.git;h=d5c7fcb5dd\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >https://gitbox.apache.org/repos/asf?p=nifi.git;h=d5c7fcb5dd</a> ]</p>\n\
+            \n<p><a href=\"https://issues.apache.org/jira/browse/NIFI-12392\" title=\"\
+            Additional Details Documentation Not Linked\" class=\"issue-link\" data-issue-key=\"\
+            NIFI-12392\"><del>NIFI-12392</del></a> Corrected Component Documentation\
+            \ NAR Unpacking</p>\n\n<ul class=\"alternate\" type=\"square\">\n\t<li>Corrected\
+            \ component documentation directory comparison for finding bundled documentation\
+            \ in a JAR</li>\n\t<li>Added unit test for unpacking of component documentation\
+            \ from JAR included in NAR</li>\n</ul>\n\n\n<p>Signed-off-by: Pierre Villard\
+            \ &lt;pierre.villard.fr@gmail.com&gt;</p>\n\n<p>This closes #8052.</p>"
+          '@author': jira-bot
+          '@created': Mon, 20 Nov 2023 13:55:52 +0000
+          '@id': '17788022'
+        - '#text': "<p>Commit bc4104525e06109120ee414d835ef68c96295a2e in nifi's branch\
+            \ refs/heads/support/nifi-1.x from David Handermann<br/>\n[ <a href=\"\
+            https://gitbox.apache.org/repos/asf?p=nifi.git;h=bc4104525e\" class=\"\
+            external-link\" target=\"_blank\" rel=\"nofollow noopener\">https://gitbox.apache.org/repos/asf?p=nifi.git;h=bc4104525e</a>\
+            \ ]</p>\n\n<p><a href=\"https://issues.apache.org/jira/browse/NIFI-12392\"\
+            \ title=\"Additional Details Documentation Not Linked\" class=\"issue-link\"\
+            \ data-issue-key=\"NIFI-12392\"><del>NIFI-12392</del></a> Corrected Component\
+            \ Documentation NAR Unpacking</p>\n\n<ul class=\"alternate\" type=\"square\"\
+            >\n\t<li>Corrected component documentation directory comparison for finding\
+            \ bundled documentation in a JAR</li>\n\t<li>Added unit test for unpacking\
+            \ of component documentation from JAR included in NAR</li>\n</ul>\n\n\n\
+            <p>Signed-off-by: Pierre Villard &lt;pierre.villard.fr@gmail.com&gt;</p>\n\
+            \n<p>This closes #8052.</p>"
+          '@author': jira-bot
+          '@created': Mon, 20 Nov 2023 13:56:15 +0000
+          '@id': '17788024'
+      created: Mon, 20 Nov 2023 04:20:57 +0000
+      customfields:
+        customfield:
+        - '@id': customfield_12310310
+          '@key': com.atlassian.jira.toolkit:attachments
+          customfieldname: Attachment count
+          customfieldvalues:
+            customfieldvalue: '0.0'
+        - '@id': customfield_12314020
+          '@key': com.atlassian.jira.plugins.jira-development-integration-plugin:devsummary
+          customfieldname: Development
+          customfieldvalues: null
+        - '@id': customfield_12313422
+          '@key': com.atlassian.jirafisheyeplugin:jobcheckbox
+          customfieldname: Enable Automatic Patch Review
+          customfieldvalues:
+            customfieldvalue: 'false'
+        - '@id': customfield_12310420
+          '@key': com.pyxis.greenhopper.jira:gh-global-rank
+          customfieldname: Global Rank
+          customfieldvalues:
+            customfieldvalue: '9223372036854775807'
+        - '@id': customfield_12312521
+          '@key': com.atlassian.jira.toolkit:LastCommentDate
+          customfieldname: Last public comment date
+          customfieldvalues: 1 year, 34 weeks, 1 day ago
+        - '@id': customfield_12311820
+          '@key': com.pyxis.greenhopper.jira:gh-lexo-rank
+          customfieldname: Rank
+          customfieldvalues:
+            customfieldvalue: '0|z1lpoo:'
+        - '@id': customfield_12310920
+          '@key': com.pyxis.greenhopper.jira:gh-global-rank
+          customfieldname: Rank (Obsolete)
+          customfieldvalues:
+            customfieldvalue: '9223372036854775807'
+      description: '<p>As a result of recent updates to the NarUnpacker class, additional
+        details documentation is not linked from component documentation pages.</p>
+
+
+        <p>The documentation generator depends on the existence of the additionalDetails.html
+        at a specific location in the documentation work directory. The NarUnpacker
+        is responsible for reading NAR files processing JAR files to find an extract
+        documentation files based on an expected relative path in the JAR containing
+        the component class. Adjustments to the unpack processing to reuse a shared
+        JAR file entry method resulted in failing to find the expected relative path.
+        Without the matched relative path, the NarUnpacker does not extract JAR file
+        entries containing the additional details documentation.</p>'
+      due: null
+      environment: null
+      fixVersion:
+      - 2.0.0-M1
+      - 1.24.0
+      issuelinks:
+        issuelinktype:
+        - '@id': '12310560'
+          inwardlinks:
+            '@description': is caused by
+            issuelink:
+              issuekey:
+                '#text': NIFI-12294
+                '@id': '13556130'
+          name: Problem/Incident
+        - '@id': '10030'
+          name: Reference
+          outwardlinks:
+            '@description': relates to
+            issuelink:
+              issuekey:
+                '#text': NIFI-12416
+                '@id': '13559584'
+      key:
+        '#text': NIFI-12392
+        '@id': '13558635'
+      labels: null
+      link: https://issues.apache.org/jira/browse/NIFI-12392
+      priority:
+        '#text': Major
+        '@iconUrl': https://issues.apache.org/jira/images/icons/priorities/major.svg
+        '@id': '3'
+      progress:
+        '@percentage': '100'
+        currentProgress:
+          row:
+          - '@backgroundColor': '#51a825'
+            '@percentage': '100'
+          - '@backgroundColor': '#ec8e00'
+            '@percentage': '0'
+        originalProgress:
+          row:
+          - '@backgroundColor': '#89afd7'
+            '@percentage': '0'
+          - '@backgroundColor': transparent
+            '@percentage': '100'
+      project:
+        '#text': Apache NiFi
+        '@id': '12316020'
+        '@key': NIFI
+      reporter:
+        '#text': David Handermann
+        '@username': exceptionfactory
+      resolution:
+        '#text': Fixed
+        '@id': '1'
+      resolved: Mon, 20 Nov 2023 13:57:00 +0000
+      status:
+        '#text': Resolved
+        '@description': A resolution has been taken, and it is awaiting verification
+          by reporter. From here issues are either reopened, or are closed.
+        '@iconUrl': https://issues.apache.org/jira/images/icons/statuses/resolved.png
+        '@id': '5'
+      statusCategory:
+        '@colorName': green
+        '@id': '3'
+        '@key': done
+      subtasks: null
+      summary: Additional Details Documentation Not Linked
+      timeestimate:
+        '#text': 0h
+        '@seconds': '0'
+      timespent:
+        '#text': 20m
+        '@seconds': '1200'
+      title: '[NIFI-12392] Additional Details Documentation Not Linked'
+      type:
+        '#text': Bug
+        '@iconUrl': https://issues.apache.org/jira/secure/viewavatar?size=xsmall&avatarId=21133&avatarType=issuetype
+        '@id': '1'
+      updated: Mon, 27 Nov 2023 15:57:09 +0000
+      votes: '0'
+      watches: '2'
+    language: en-uk
+    link: https://issues.apache.org/jira
+    title: ASF JIRA
