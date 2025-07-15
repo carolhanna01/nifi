@@ -1,0 +1,383 @@
+[INFO] Scanning for projects...
+[INFO] Inspecting build with total of 1 modules...
+[INFO] Installing Nexus Staging features:
+[INFO]   ... total of 1 executions of maven-deploy-plugin replaced with nexus-staging-maven-plugin
+[INFO] 
+[INFO] --------------< org.apache.nifi:nifi-standard-processors >--------------
+[INFO] Building nifi-standard-processors 2.0.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.4.1:enforce (enforce-maven-version) @ nifi-standard-processors ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.BanDuplicatePomDependencyVersions passed
+[INFO] Rule 1: org.apache.maven.enforcer.rules.RequireSameVersions passed
+[INFO] Rule 2: org.apache.maven.enforcer.rules.version.RequireMavenVersion passed
+[INFO] Rule 3: org.apache.maven.enforcer.rules.dependency.RequireReleaseDeps passed
+[INFO] Rule 4: org.apache.maven.enforcer.rules.dependency.BannedDependencies passed
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.4.1:enforce (enforce-java-version) @ nifi-standard-processors ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireJavaVersion passed
+[INFO] 
+[INFO] --- buildnumber-maven-plugin:3.2.0:create (default) @ nifi-standard-processors ---
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:3.1.0:process (process-resource-bundles) @ nifi-standard-processors ---
+[INFO] Preparing remote bundle org.apache.apache.resources:apache-jar-resource-bundle:1.5
+[INFO] Copying 3 resources from 1 bundle.
+[INFO] 
+[INFO] --- maven-resources-plugin:3.3.1:resources (default-resources) @ nifi-standard-processors ---
+[INFO] Copying 46 resources from src/main/resources to target/classes
+[INFO] Copying 3 resources from target/maven-shared-archive-resources to target/classes
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.11.0:compile (default-compile) @ nifi-standard-processors ---
+[INFO] Changes detected - recompiling the module! :source
+[INFO] Compiling 226 source files with javac [forked debug deprecation release 21] to target/classes
+[WARNING] /home/carol/Downloads/Workspaces/bugs-dot-jar/nifi/nifi-nar-bundles/nifi-standard-bundle/nifi-standard-processors/src/main/java/org/apache/nifi/processors/standard/UnpackContent.java:[356,44] [deprecation] getNextTarEntry() in TarArchiveInputStream has been deprecated
+[WARNING] /home/carol/Downloads/Workspaces/bugs-dot-jar/nifi/nifi-nar-bundles/nifi-standard-bundle/nifi-standard-processors/src/main/java/org/apache/nifi/processors/standard/UnpackContent.java:[493,53] [deprecation] getNextZipEntry() in ZipArchiveInputStream has been deprecated
+[INFO] 
+[INFO] --- maven-resources-plugin:3.3.1:testResources (default-testResources) @ nifi-standard-processors ---
+[INFO] Copying 282 resources from src/test/resources to target/test-classes
+[INFO] Copying 3 resources from target/maven-shared-archive-resources to target/test-classes
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.11.0:testCompile (default-testCompile) @ nifi-standard-processors ---
+[INFO] Changes detected - recompiling the module! :dependency
+[INFO] Compiling 158 source files with javac [forked debug deprecation release 21] to target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:3.1.2:test (default-test) @ nifi-standard-processors ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.apache.nifi.processors.standard.TestPutUDP
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.180 s -- in org.apache.nifi.processors.standard.TestPutUDP
+[INFO] Running org.apache.nifi.processors.standard.TestFilterAttribute
+[INFO] Running org.apache.nifi.processors.standard.TestFilterAttribute$WithStrategyEnumeration
+[INFO] Running org.apache.nifi.processors.standard.TestFilterAttribute$WithStrategyEnumeration$RegardingAttributeSetParsing
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.038 s -- in org.apache.nifi.processors.standard.TestFilterAttribute$WithStrategyEnumeration$RegardingAttributeSetParsing
+[INFO] Running org.apache.nifi.processors.standard.TestFilterAttribute$WithStrategyEnumeration$InModeRetain
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 s -- in org.apache.nifi.processors.standard.TestFilterAttribute$WithStrategyEnumeration$InModeRetain
+[INFO] Running org.apache.nifi.processors.standard.TestFilterAttribute$WithStrategyEnumeration$InModeRemove
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 s -- in org.apache.nifi.processors.standard.TestFilterAttribute$WithStrategyEnumeration$InModeRemove
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.111 s -- in org.apache.nifi.processors.standard.TestFilterAttribute$WithStrategyEnumeration
+[INFO] Running org.apache.nifi.processors.standard.TestFilterAttribute$WithStrategyRegex
+[INFO] Running org.apache.nifi.processors.standard.TestFilterAttribute$WithStrategyRegex$InModeRetain
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 s -- in org.apache.nifi.processors.standard.TestFilterAttribute$WithStrategyRegex$InModeRetain
+[INFO] Running org.apache.nifi.processors.standard.TestFilterAttribute$WithStrategyRegex$InModeRemove
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 s -- in org.apache.nifi.processors.standard.TestFilterAttribute$WithStrategyRegex$InModeRemove
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.029 s -- in org.apache.nifi.processors.standard.TestFilterAttribute$WithStrategyRegex
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.367 s -- in org.apache.nifi.processors.standard.TestFilterAttribute
+[INFO] Running org.apache.nifi.processors.standard.TestParseSyslog5424
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.080 s -- in org.apache.nifi.processors.standard.TestParseSyslog5424
+[INFO] Running org.apache.nifi.processors.standard.TestAttributesToJSON
+[INFO] Tests run: 25, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.214 s -- in org.apache.nifi.processors.standard.TestAttributesToJSON
+[INFO] Running org.apache.nifi.processors.standard.TestQueryRecord
+[INFO] Tests run: 24, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.788 s -- in org.apache.nifi.processors.standard.TestQueryRecord
+[INFO] Running org.apache.nifi.processors.standard.TestPutDistributedMapCache
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 s -- in org.apache.nifi.processors.standard.TestPutDistributedMapCache
+[INFO] Running org.apache.nifi.processors.standard.TestExecuteSQLRecord
+[INFO] Tests run: 20, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.583 s -- in org.apache.nifi.processors.standard.TestExecuteSQLRecord
+[INFO] Running org.apache.nifi.processors.standard.TestScanAttribute
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.033 s -- in org.apache.nifi.processors.standard.TestScanAttribute
+[INFO] Running org.apache.nifi.processors.standard.TestTailFileSimpleScenarios
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.124 s -- in org.apache.nifi.processors.standard.TestTailFileSimpleScenarios
+[INFO] Running org.apache.nifi.processors.standard.TestExtractGrok
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.086 s -- in org.apache.nifi.processors.standard.TestExtractGrok
+[INFO] Running org.apache.nifi.processors.standard.TestReplaceTextWithMapping
+[INFO] Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.061 s -- in org.apache.nifi.processors.standard.TestReplaceTextWithMapping
+[INFO] Running org.apache.nifi.processors.standard.http.HandleHttpRequestCertificateAttributesProviderTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.254 s -- in org.apache.nifi.processors.standard.http.HandleHttpRequestCertificateAttributesProviderTest
+[INFO] Running org.apache.nifi.processors.standard.TestFetchDistributedMapCache
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.034 s -- in org.apache.nifi.processors.standard.TestFetchDistributedMapCache
+[INFO] Running org.apache.nifi.processors.standard.TestModifyBytes
+[INFO] Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.038 s -- in org.apache.nifi.processors.standard.TestModifyBytes
+[INFO] Running org.apache.nifi.processors.standard.TestUnpackContent
+[INFO] Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.238 s -- in org.apache.nifi.processors.standard.TestUnpackContent
+[INFO] Running org.apache.nifi.processors.standard.TestAttributesToCSV
+[INFO] Tests run: 21, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.044 s -- in org.apache.nifi.processors.standard.TestAttributesToCSV
+[INFO] Running org.apache.nifi.processors.standard.TestListSFTP
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.420 s -- in org.apache.nifi.processors.standard.TestListSFTP
+[INFO] Running org.apache.nifi.processors.standard.TestPutEmail
+[INFO] Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.388 s -- in org.apache.nifi.processors.standard.TestPutEmail
+[INFO] Running org.apache.nifi.processors.standard.TestEvaluateXQuery
+[INFO] Tests run: 24, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.356 s -- in org.apache.nifi.processors.standard.TestEvaluateXQuery
+[INFO] Running org.apache.nifi.processors.standard.relp.frame.TestRELPDecoder
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s -- in org.apache.nifi.processors.standard.relp.frame.TestRELPDecoder
+[INFO] Running org.apache.nifi.processors.standard.relp.frame.TestRELPFrame
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s -- in org.apache.nifi.processors.standard.relp.frame.TestRELPFrame
+[INFO] Running org.apache.nifi.processors.standard.relp.frame.RELPResponseEncoderTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 s -- in org.apache.nifi.processors.standard.relp.frame.RELPResponseEncoderTest
+[INFO] Running org.apache.nifi.processors.standard.relp.frame.TestRELPEncoder
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s -- in org.apache.nifi.processors.standard.relp.frame.TestRELPEncoder
+[INFO] Running org.apache.nifi.processors.standard.relp.frame.RELPFrameDecoderTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s -- in org.apache.nifi.processors.standard.relp.frame.RELPFrameDecoderTest
+[INFO] Running org.apache.nifi.processors.standard.relp.response.TestRELPResponse
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s -- in org.apache.nifi.processors.standard.relp.response.TestRELPResponse
+[INFO] Running org.apache.nifi.processors.standard.TestGetFile
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.021 s -- in org.apache.nifi.processors.standard.TestGetFile
+[INFO] Running org.apache.nifi.processors.standard.TestFetchFile
+[INFO] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 s -- in org.apache.nifi.processors.standard.TestFetchFile
+[INFO] Running org.apache.nifi.processors.standard.TestTailFileGeneratedScenarios
+[WARNING] Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0 s -- in org.apache.nifi.processors.standard.TestTailFileGeneratedScenarios
+[INFO] Running org.apache.nifi.processors.standard.TestUpdateDatabaseTable
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.651 s -- in org.apache.nifi.processors.standard.TestUpdateDatabaseTable
+[INFO] Running org.apache.nifi.processors.standard.TestEncodeContent
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 s -- in org.apache.nifi.processors.standard.TestEncodeContent
+[INFO] Running org.apache.nifi.processors.standard.TestUpdateCounter
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s -- in org.apache.nifi.processors.standard.TestUpdateCounter
+[INFO] Running org.apache.nifi.processors.standard.TestNotify
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.068 s -- in org.apache.nifi.processors.standard.TestNotify
+[INFO] Running org.apache.nifi.processors.standard.TestEnforceOrder
+[INFO] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.074 s -- in org.apache.nifi.processors.standard.TestEnforceOrder
+[INFO] Running org.apache.nifi.processors.standard.TestWaitNotifyProtocol
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.249 s -- in org.apache.nifi.processors.standard.TestWaitNotifyProtocol
+[INFO] Running org.apache.nifi.processors.standard.TestScanContent
+[WARNING] Tests run: 2, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.006 s -- in org.apache.nifi.processors.standard.TestScanContent
+[INFO] Running org.apache.nifi.processors.standard.TestValidateJson
+[INFO] Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.076 s -- in org.apache.nifi.processors.standard.TestValidateJson
+[INFO] Running org.apache.nifi.processors.standard.calcite.TestRecordResultSetOutputStreamCallback
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.110 s -- in org.apache.nifi.processors.standard.calcite.TestRecordResultSetOutputStreamCallback
+[INFO] Running org.apache.nifi.processors.standard.TestReplaceText
+[INFO] Tests run: 102, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.187 s -- in org.apache.nifi.processors.standard.TestReplaceText
+[INFO] Running org.apache.nifi.processors.standard.TestExecuteStreamCommand
+[INFO] Tests run: 37, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.821 s -- in org.apache.nifi.processors.standard.TestExecuteStreamCommand
+[INFO] Running org.apache.nifi.processors.standard.TestLookupAttribute
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s -- in org.apache.nifi.processors.standard.TestLookupAttribute
+[INFO] Running org.apache.nifi.processors.standard.TestSplitXml
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.020 s -- in org.apache.nifi.processors.standard.TestSplitXml
+[INFO] Running org.apache.nifi.processors.standard.TestTransformXml
+[INFO] Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.385 s -- in org.apache.nifi.processors.standard.TestTransformXml
+[INFO] Running org.apache.nifi.processors.standard.TestExecuteProcess
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.555 s -- in org.apache.nifi.processors.standard.TestExecuteProcess
+[INFO] Running org.apache.nifi.processors.standard.TestPutFile
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.020 s -- in org.apache.nifi.processors.standard.TestPutFile
+[INFO] Running org.apache.nifi.processors.standard.TestListenRELP
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.879 s -- in org.apache.nifi.processors.standard.TestListenRELP
+[INFO] Running org.apache.nifi.processors.standard.TestJoinEnrichment
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.275 s -- in org.apache.nifi.processors.standard.TestJoinEnrichment
+[INFO] Running org.apache.nifi.processors.standard.QueryDatabaseTableRecordTest
+[INFO] Tests run: 21, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.463 s -- in org.apache.nifi.processors.standard.QueryDatabaseTableRecordTest
+[INFO] Running org.apache.nifi.processors.standard.TestEvaluateJsonPath
+[INFO] Tests run: 19, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.054 s -- in org.apache.nifi.processors.standard.TestEvaluateJsonPath
+[INFO] Running org.apache.nifi.processors.standard.TestPutSQL
+[INFO] Tests run: 42, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.711 s -- in org.apache.nifi.processors.standard.TestPutSQL
+[INFO] Running org.apache.nifi.processors.standard.TestEvaluateXPath
+[INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.082 s -- in org.apache.nifi.processors.standard.TestEvaluateXPath
+[INFO] Running org.apache.nifi.processors.standard.TestValidateCsv
+[INFO] Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.054 s -- in org.apache.nifi.processors.standard.TestValidateCsv
+[INFO] Running org.apache.nifi.processors.standard.TestRenameRecordField
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.060 s -- in org.apache.nifi.processors.standard.TestRenameRecordField
+[INFO] Running org.apache.nifi.processors.standard.TestTailFile
+[INFO] Tests run: 33, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 18.41 s -- in org.apache.nifi.processors.standard.TestTailFile
+[INFO] Running org.apache.nifi.processors.standard.TestDeduplicateRecord
+[INFO] Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.032 s -- in org.apache.nifi.processors.standard.TestDeduplicateRecord
+[INFO] Running org.apache.nifi.processors.standard.TestFetchFTP
+[INFO] Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.171 s -- in org.apache.nifi.processors.standard.TestFetchFTP
+[INFO] Running org.apache.nifi.processors.standard.TestRouteOnContent
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s -- in org.apache.nifi.processors.standard.TestRouteOnContent
+[INFO] Running org.apache.nifi.processors.standard.TestGetSFTP
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.545 s -- in org.apache.nifi.processors.standard.TestGetSFTP
+[INFO] Running org.apache.nifi.processors.standard.TestCalculateRecordStats
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s -- in org.apache.nifi.processors.standard.TestCalculateRecordStats
+[INFO] Running org.apache.nifi.processors.standard.TestListenUDP
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.355 s -- in org.apache.nifi.processors.standard.TestListenUDP
+[INFO] Running org.apache.nifi.processors.standard.TestExtractText
+[INFO] Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 s -- in org.apache.nifi.processors.standard.TestExtractText
+[INFO] Running org.apache.nifi.processors.standard.TestExtractRecordSchema
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s -- in org.apache.nifi.processors.standard.TestExtractRecordSchema
+[INFO] Running org.apache.nifi.processors.standard.HandleHttpRequestTest
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.232 s <<< FAILURE! -- in org.apache.nifi.processors.standard.HandleHttpRequestTest
+[ERROR] org.apache.nifi.processors.standard.HandleHttpRequestTest.testRunMethodNotAllowed -- Time elapsed: 0.062 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <405> but was: <404>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:527)
+	at org.apache.nifi.processors.standard.HandleHttpRequestTest.testRunMethodNotAllowed(HandleHttpRequestTest.java:120)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+[INFO] Running org.apache.nifi.processors.standard.TestSegmentContent
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s -- in org.apache.nifi.processors.standard.TestSegmentContent
+[INFO] Running org.apache.nifi.processors.standard.TestListenSyslog
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.190 s -- in org.apache.nifi.processors.standard.TestListenSyslog
+[INFO] Running org.apache.nifi.processors.standard.TestRouteOnAttribute
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s -- in org.apache.nifi.processors.standard.TestRouteOnAttribute
+[INFO] Running org.apache.nifi.processors.standard.TestRemoveRecordField
+[INFO] Tests run: 24, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.105 s -- in org.apache.nifi.processors.standard.TestRemoveRecordField
+[INFO] Running org.apache.nifi.processors.standard.TestCompressContent
+[INFO] Tests run: 21, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.155 s -- in org.apache.nifi.processors.standard.TestCompressContent
+[INFO] Running org.apache.nifi.processors.standard.TestSplitJson
+[INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.027 s -- in org.apache.nifi.processors.standard.TestSplitJson
+[INFO] Running org.apache.nifi.processors.standard.TestDetectDuplicate
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.018 s -- in org.apache.nifi.processors.standard.TestDetectDuplicate
+[INFO] Running org.apache.nifi.processors.standard.TestListFile
+[INFO] Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.260 s -- in org.apache.nifi.processors.standard.TestListFile
+[INFO] Running org.apache.nifi.processors.standard.TestGenerateFlowFile
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s -- in org.apache.nifi.processors.standard.TestGenerateFlowFile
+[INFO] Running org.apache.nifi.processors.standard.TestConvertCharacterSet
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.029 s -- in org.apache.nifi.processors.standard.TestConvertCharacterSet
+[INFO] Running org.apache.nifi.processors.standard.CryptographicHashContentTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.071 s -- in org.apache.nifi.processors.standard.CryptographicHashContentTest
+[INFO] Running org.apache.nifi.processors.standard.TestValidateRecord
+[INFO] Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.096 s -- in org.apache.nifi.processors.standard.TestValidateRecord
+[INFO] Running org.apache.nifi.processors.standard.TestGenerateRecord
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 17.33 s -- in org.apache.nifi.processors.standard.TestGenerateRecord
+[INFO] Running org.apache.nifi.processors.standard.ssh.StandardSSHConfigProviderTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.137 s -- in org.apache.nifi.processors.standard.ssh.StandardSSHConfigProviderTest
+[INFO] Running org.apache.nifi.processors.standard.util.TestFlowFileAttributesSerializer
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s -- in org.apache.nifi.processors.standard.util.TestFlowFileAttributesSerializer
+[INFO] Running org.apache.nifi.processors.standard.util.TestServerSFTPTransfer
+[INFO] Tests run: 33, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.122 s -- in org.apache.nifi.processors.standard.util.TestServerSFTPTransfer
+[INFO] Running org.apache.nifi.processors.standard.util.TestSFTPTransfer
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.115 s -- in org.apache.nifi.processors.standard.util.TestSFTPTransfer
+[INFO] Running org.apache.nifi.processors.standard.TestRouteText
+[INFO] Tests run: 33, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.107 s -- in org.apache.nifi.processors.standard.TestRouteText
+[INFO] Running org.apache.nifi.processors.standard.TestPartitionRecord
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.034 s -- in org.apache.nifi.processors.standard.TestPartitionRecord
+[INFO] Running org.apache.nifi.processors.standard.TestConvertRecord
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.048 s -- in org.apache.nifi.processors.standard.TestConvertRecord
+[INFO] Running org.apache.nifi.processors.standard.TestListenHTTP
+[INFO] Tests run: 28, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.305 s -- in org.apache.nifi.processors.standard.TestListenHTTP
+[INFO] Running org.apache.nifi.processors.standard.TestIdentifyMimeType
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.234 s -- in org.apache.nifi.processors.standard.TestIdentifyMimeType
+[INFO] Running org.apache.nifi.processors.standard.TestValidateXml
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.087 s -- in org.apache.nifi.processors.standard.TestValidateXml
+[INFO] Running org.apache.nifi.processors.standard.TestExecuteSQL
+[INFO] Tests run: 24, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 17.34 s -- in org.apache.nifi.processors.standard.TestExecuteSQL
+[INFO] Running org.apache.nifi.processors.standard.TestLogMessage
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s -- in org.apache.nifi.processors.standard.TestLogMessage
+[INFO] Running org.apache.nifi.processors.standard.TestSplitRecord
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.010 s -- in org.apache.nifi.processors.standard.TestSplitRecord
+[INFO] Running org.apache.nifi.processors.standard.TestSampleRecord
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 s -- in org.apache.nifi.processors.standard.TestSampleRecord
+[INFO] Running org.apache.nifi.processors.standard.TestSplitText
+[INFO] Tests run: 32, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.044 s -- in org.apache.nifi.processors.standard.TestSplitText
+[INFO] Running org.apache.nifi.processors.standard.TestPutSyslog
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.73 s -- in org.apache.nifi.processors.standard.TestPutSyslog
+[INFO] Running org.apache.nifi.processors.standard.SplitXmlTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s -- in org.apache.nifi.processors.standard.SplitXmlTest
+[INFO] Running org.apache.nifi.processors.standard.TestGenerateTableFetch
+[INFO] Tests run: 24, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.012 s -- in org.apache.nifi.processors.standard.TestGenerateTableFetch
+[INFO] Running org.apache.nifi.processors.standard.TestUpdateRecord
+[INFO] Tests run: 24, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.106 s -- in org.apache.nifi.processors.standard.TestUpdateRecord
+[INFO] Running org.apache.nifi.processors.standard.TestExtractTextNamedGroups
+[INFO] Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.020 s -- in org.apache.nifi.processors.standard.TestExtractTextNamedGroups
+[INFO] Running org.apache.nifi.processors.standard.TestPutTCP
+[INFO] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.680 s -- in org.apache.nifi.processors.standard.TestPutTCP
+[INFO] Running org.apache.nifi.processors.standard.TestLookupRecord
+[INFO] Tests run: 19, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.112 s -- in org.apache.nifi.processors.standard.TestLookupRecord
+[INFO] Running org.apache.nifi.processors.standard.PutDatabaseRecordTest
+[INFO] Tests run: 43, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.477 s -- in org.apache.nifi.processors.standard.PutDatabaseRecordTest
+[INFO] Running org.apache.nifi.processors.standard.db.impl.TestOracle12DatabaseAdapter
+[INFO] Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s -- in org.apache.nifi.processors.standard.db.impl.TestOracle12DatabaseAdapter
+[INFO] Running org.apache.nifi.processors.standard.db.impl.TestMSSQL2008DatabaseAdapter
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s -- in org.apache.nifi.processors.standard.db.impl.TestMSSQL2008DatabaseAdapter
+[INFO] Running org.apache.nifi.processors.standard.db.impl.TestPhoenixDatabaseAdapter
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s -- in org.apache.nifi.processors.standard.db.impl.TestPhoenixDatabaseAdapter
+[INFO] Running org.apache.nifi.processors.standard.db.impl.TestPostgreSQLDatabaseAdapter
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s -- in org.apache.nifi.processors.standard.db.impl.TestPostgreSQLDatabaseAdapter
+[INFO] Running org.apache.nifi.processors.standard.db.impl.TestMSSQLDatabaseAdapter
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s -- in org.apache.nifi.processors.standard.db.impl.TestMSSQLDatabaseAdapter
+[INFO] Running org.apache.nifi.processors.standard.db.impl.TestMySQLDatabaseAdapter
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s -- in org.apache.nifi.processors.standard.db.impl.TestMySQLDatabaseAdapter
+[INFO] Running org.apache.nifi.processors.standard.db.impl.TestOracleDatabaseAdapter
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s -- in org.apache.nifi.processors.standard.db.impl.TestOracleDatabaseAdapter
+[INFO] Running org.apache.nifi.processors.standard.TestDebugFlow
+[INFO] Tests run: 19, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.024 s -- in org.apache.nifi.processors.standard.TestDebugFlow
+[INFO] Running org.apache.nifi.processors.standard.TestListDatabaseTables
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.089 s -- in org.apache.nifi.processors.standard.TestListDatabaseTables
+[INFO] Running org.apache.nifi.processors.standard.InvokeHTTPTest
+[INFO] Tests run: 66, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.725 s -- in org.apache.nifi.processors.standard.InvokeHTTPTest
+[INFO] Running org.apache.nifi.processors.standard.TestRetryFlowFile
+[INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 s -- in org.apache.nifi.processors.standard.TestRetryFlowFile
+[INFO] Running org.apache.nifi.processors.standard.TestForkRecord
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.021 s -- in org.apache.nifi.processors.standard.TestForkRecord
+[INFO] Running org.apache.nifi.processors.standard.TestHandleHttpResponse
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.076 s -- in org.apache.nifi.processors.standard.TestHandleHttpResponse
+[INFO] Running org.apache.nifi.processors.standard.TestMergeContent
+[INFO] Tests run: 39, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.191 s -- in org.apache.nifi.processors.standard.TestMergeContent
+[INFO] Running org.apache.nifi.processors.standard.enrichment.TestWrapperJoinStrategy
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s -- in org.apache.nifi.processors.standard.enrichment.TestWrapperJoinStrategy
+[INFO] Running org.apache.nifi.processors.standard.enrichment.TestInsertRecordFieldsJoinStrategy
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s -- in org.apache.nifi.processors.standard.enrichment.TestInsertRecordFieldsJoinStrategy
+[INFO] Running org.apache.nifi.processors.standard.socket.ProxySocketFactoryTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s -- in org.apache.nifi.processors.standard.socket.ProxySocketFactoryTest
+[INFO] Running org.apache.nifi.processors.standard.socket.StandardSocketFactoryProviderTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s -- in org.apache.nifi.processors.standard.socket.StandardSocketFactoryProviderTest
+[INFO] Running org.apache.nifi.processors.standard.QueryDatabaseTableTest
+[INFO] Tests run: 21, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.986 s -- in org.apache.nifi.processors.standard.QueryDatabaseTableTest
+[INFO] Running org.apache.nifi.processors.standard.TestPutRecord
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s -- in org.apache.nifi.processors.standard.TestPutRecord
+[INFO] Running org.apache.nifi.processors.standard.TestPackageFlowFile
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s -- in org.apache.nifi.processors.standard.TestPackageFlowFile
+[INFO] Running org.apache.nifi.processors.standard.TestAbstractExecuteSQL
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s -- in org.apache.nifi.processors.standard.TestAbstractExecuteSQL
+[INFO] Running org.apache.nifi.processors.standard.TestWait
+[INFO] Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.235 s -- in org.apache.nifi.processors.standard.TestWait
+[INFO] Running org.apache.nifi.processors.standard.TestMergeRecord
+[WARNING] Tests run: 20, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.111 s -- in org.apache.nifi.processors.standard.TestMergeRecord
+[INFO] Running org.apache.nifi.processors.standard.TestListenTCP
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.591 s -- in org.apache.nifi.processors.standard.TestListenTCP
+[INFO] Running org.apache.nifi.processors.standard.TestFTP
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.606 s -- in org.apache.nifi.processors.standard.TestFTP
+[INFO] Running org.apache.nifi.processors.standard.TestDistributeLoad
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 s -- in org.apache.nifi.processors.standard.TestDistributeLoad
+[INFO] Running org.apache.nifi.processors.standard.TestListenTCPRecord
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.25 s -- in org.apache.nifi.processors.standard.TestListenTCPRecord
+[INFO] Running org.apache.nifi.processors.standard.TestMonitorActivity
+[INFO] Tests run: 26, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.542 s -- in org.apache.nifi.processors.standard.TestMonitorActivity
+[INFO] Running org.apache.nifi.processors.standard.TestSplitContent
+[INFO] Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s -- in org.apache.nifi.processors.standard.TestSplitContent
+[INFO] Running org.apache.nifi.processors.standard.TestParseCEF
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.051 s -- in org.apache.nifi.processors.standard.TestParseCEF
+[INFO] Running org.apache.nifi.processors.standard.TestParseSyslog
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s -- in org.apache.nifi.processors.standard.TestParseSyslog
+[INFO] Running org.apache.nifi.processors.standard.TestLogAttribute
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s -- in org.apache.nifi.processors.standard.TestLogAttribute
+[INFO] Running org.apache.nifi.processors.standard.TestControlRate
+[INFO] Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.044 s -- in org.apache.nifi.processors.standard.TestControlRate
+[INFO] Running org.apache.nifi.processors.standard.TestPutSFTP
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.281 s -- in org.apache.nifi.processors.standard.TestPutSFTP
+[INFO] Running org.apache.nifi.processors.standard.TestConvertJSONToSQL
+[INFO] Tests run: 32, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.125 s -- in org.apache.nifi.processors.standard.TestConvertJSONToSQL
+[INFO] Running org.apache.nifi.processors.standard.CountTextTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.092 s -- in org.apache.nifi.processors.standard.CountTextTest
+[INFO] Running org.apache.nifi.processors.standard.TestFlattenJson
+[INFO] Tests run: 18, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.030 s -- in org.apache.nifi.processors.standard.TestFlattenJson
+[INFO] Running org.apache.nifi.processors.standard.ftp.TestVirtualFileSystemView
+[INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s -- in org.apache.nifi.processors.standard.ftp.TestVirtualFileSystemView
+[INFO] Running org.apache.nifi.processors.standard.ftp.TestVirtualFileSystem
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s -- in org.apache.nifi.processors.standard.ftp.TestVirtualFileSystem
+[INFO] Running org.apache.nifi.processors.standard.ftp.TestVirtualPath
+[INFO] Tests run: 22, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s -- in org.apache.nifi.processors.standard.ftp.TestVirtualPath
+[INFO] Running org.apache.nifi.processors.standard.TestListenUDPRecord
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.220 s -- in org.apache.nifi.processors.standard.TestListenUDPRecord
+[INFO] Running org.apache.nifi.processors.standard.TestDuplicateFlowFile
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s -- in org.apache.nifi.processors.standard.TestDuplicateFlowFile
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   HandleHttpRequestTest.testRunMethodNotAllowed:120 expected: <405> but was: <404>
+[INFO] 
+[ERROR] Tests run: 1756, Failures: 1, Errors: 0, Skipped: 3
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  02:41 min
+[INFO] Finished at: 2025-07-15T23:47:44+01:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.1.2:test (default-test) on project nifi-standard-processors: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/carol/Downloads/Workspaces/bugs-dot-jar/nifi/nifi-nar-bundles/nifi-standard-bundle/nifi-standard-processors/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

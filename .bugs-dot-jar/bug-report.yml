@@ -1,0 +1,168 @@
+rss:
+  '@version': '0.92'
+  channel:
+    build-info:
+      build-date: 22-06-2022
+      build-number: '820010'
+      version: 8.20.10
+    description: This file is an XML representation of an issue
+    item:
+      aggregateprogress:
+        '@percentage': '100'
+        currentProgress:
+          row:
+          - '@backgroundColor': '#51a825'
+            '@percentage': '100'
+          - '@backgroundColor': '#ec8e00'
+            '@percentage': '0'
+        originalProgress:
+          row:
+          - '@backgroundColor': '#89afd7'
+            '@percentage': '0'
+          - '@backgroundColor': transparent
+            '@percentage': '100'
+      assignee:
+        '#text': David Handermann
+        '@username': exceptionfactory
+      attachments: null
+      comments:
+        comment:
+          '#text': '<p>Commit 103e350943233c6a780ab1086b2da9872df7c312 in nifi''s
+            branch refs/heads/main from David Handermann<br/>
+
+            [ <a href="https://gitbox.apache.org/repos/asf?p=nifi.git;h=103e350943"
+            class="external-link" target="_blank" rel="nofollow noopener">https://gitbox.apache.org/repos/asf?p=nifi.git;h=103e350943</a>
+            ]</p>
+
+
+            <p><a href="https://issues.apache.org/jira/browse/NIFI-12676" title="HandleHttpRequest
+            Servlet Not Registered" class="issue-link" data-issue-key="NIFI-12676"><del>NIFI-12676</del></a>
+            Fixed Servlet Registration in HandleHttpRequest<br/>
+
+            This closes #8304.</p>
+
+
+            <p>Signed-off-by: Joseph Witt &lt;joewitt@apache.org&gt;</p>'
+          '@author': jira-bot
+          '@created': Thu, 25 Jan 2024 23:41:04 +0000
+          '@id': '17811058'
+      created: Thu, 25 Jan 2024 22:10:37 +0000
+      customfields:
+        customfield:
+        - '@id': customfield_12310310
+          '@key': com.atlassian.jira.toolkit:attachments
+          customfieldname: Attachment count
+          customfieldvalues:
+            customfieldvalue: '0.0'
+        - '@id': customfield_12314020
+          '@key': com.atlassian.jira.plugins.jira-development-integration-plugin:devsummary
+          customfieldname: Development
+          customfieldvalues: null
+        - '@id': customfield_12313422
+          '@key': com.atlassian.jirafisheyeplugin:jobcheckbox
+          customfieldname: Enable Automatic Patch Review
+          customfieldvalues:
+            customfieldvalue: 'false'
+        - '@id': customfield_12310420
+          '@key': com.pyxis.greenhopper.jira:gh-global-rank
+          customfieldname: Global Rank
+          customfieldvalues:
+            customfieldvalue: '9223372036854775807'
+        - '@id': customfield_12312521
+          '@key': com.atlassian.jira.toolkit:LastCommentDate
+          customfieldname: Last public comment date
+          customfieldvalues: 1 year, 24 weeks, 4 days ago
+        - '@id': customfield_12311820
+          '@key': com.pyxis.greenhopper.jira:gh-lexo-rank
+          customfieldname: Rank
+          customfieldvalues:
+            customfieldvalue: '0|z1n0dc:'
+        - '@id': customfield_12310920
+          '@key': com.pyxis.greenhopper.jira:gh-global-rank
+          customfieldname: Rank (Obsolete)
+          customfieldvalues:
+            customfieldvalue: '9223372036854775807'
+      description: '<p>Following recent upgrades to Jetty 12, the HandleHttpRequest
+        Processor is not registered the standard Servlet that it uses to handle HTTP
+        requests.</p>
+
+
+        <p>The Jetty ServletContextHandler should be used together with a root path
+        mapping to allow HandleHttpRequest to process requests according to configured
+        properties.</p>'
+      due: null
+      environment: null
+      fixVersion: 2.0.0-M2
+      issuelinks:
+        issuelinktype:
+          '@id': '12310560'
+          inwardlinks:
+            '@description': is caused by
+            issuelink:
+              issuekey:
+                '#text': NIFI-11703
+                '@id': '13540322'
+          name: Problem/Incident
+      key:
+        '#text': NIFI-12676
+        '@id': '13566206'
+      labels: null
+      link: https://issues.apache.org/jira/browse/NIFI-12676
+      priority:
+        '#text': Critical
+        '@iconUrl': https://issues.apache.org/jira/images/icons/priorities/critical.svg
+        '@id': '2'
+      progress:
+        '@percentage': '100'
+        currentProgress:
+          row:
+          - '@backgroundColor': '#51a825'
+            '@percentage': '100'
+          - '@backgroundColor': '#ec8e00'
+            '@percentage': '0'
+        originalProgress:
+          row:
+          - '@backgroundColor': '#89afd7'
+            '@percentage': '0'
+          - '@backgroundColor': transparent
+            '@percentage': '100'
+      project:
+        '#text': Apache NiFi
+        '@id': '12316020'
+        '@key': NIFI
+      reporter:
+        '#text': David Handermann
+        '@username': exceptionfactory
+      resolution:
+        '#text': Fixed
+        '@id': '1'
+      resolved: Thu, 25 Jan 2024 23:41:25 +0000
+      status:
+        '#text': Resolved
+        '@description': A resolution has been taken, and it is awaiting verification
+          by reporter. From here issues are either reopened, or are closed.
+        '@iconUrl': https://issues.apache.org/jira/images/icons/statuses/resolved.png
+        '@id': '5'
+      statusCategory:
+        '@colorName': green
+        '@id': '3'
+        '@key': done
+      subtasks: null
+      summary: HandleHttpRequest Servlet Not Registered
+      timeestimate:
+        '#text': 0h
+        '@seconds': '0'
+      timespent:
+        '#text': 20m
+        '@seconds': '1200'
+      title: '[NIFI-12676] HandleHttpRequest Servlet Not Registered'
+      type:
+        '#text': Bug
+        '@iconUrl': https://issues.apache.org/jira/secure/viewavatar?size=xsmall&avatarId=21133&avatarType=issuetype
+        '@id': '1'
+      updated: Thu, 25 Jan 2024 23:41:25 +0000
+      votes: '0'
+      watches: '2'
+    language: en-uk
+    link: https://issues.apache.org/jira
+    title: ASF JIRA
