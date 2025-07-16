@@ -291,11 +291,7 @@ public class OkHttpReplicationClient implements HttpReplicationClient {
 
 
     private boolean isUseGzip(final Map<String, String> headers) {
-        String rawAcceptEncoding = headers.get(HttpHeaders.ACCEPT_ENCODING);
-
-        if (rawAcceptEncoding == null) {
-            rawAcceptEncoding = headers.get(HttpHeaders.ACCEPT_ENCODING.toLowerCase());
-        }
+        final String rawAcceptEncoding = headers.get(HttpHeaders.ACCEPT_ENCODING);
 
         if (rawAcceptEncoding == null) {
             return false;
