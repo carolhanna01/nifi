@@ -1,0 +1,268 @@
+rss:
+  '@version': '0.92'
+  channel:
+    build-info:
+      build-date: 22-06-2022
+      build-number: '820010'
+      version: 8.20.10
+    description: This file is an XML representation of an issue
+    item:
+      assignee:
+        '#text': Tony Kurc
+        '@username': tkurc
+      attachments: null
+      comments:
+        comment:
+        - '#text': <p>Got a working solution. Will put up patch soon.</p>
+          '@author': tkurc
+          '@created': Sun, 20 Mar 2016 21:53:12 +0000
+          '@id': '15203538'
+        - '#text': "<p>GitHub user trkurc opened a pull request:</p>\n\n<p>    <a\
+            \ href=\"https://github.com/apache/nifi/pull/292\" class=\"external-link\"\
+            \ target=\"_blank\" rel=\"nofollow noopener\">https://github.com/apache/nifi/pull/292</a></p>\n\
+            \n<p>    <a href=\"https://issues.apache.org/jira/browse/NIFI-1656\" title=\"\
+            Kite processor scanner usage presumes a particular locale\" class=\"issue-link\"\
+            \ data-issue-key=\"NIFI-1656\"><del>NIFI-1656</del></a> Added locale support\
+            \ to ConvertAvroSchema and fixed locale \u2026</p>\n\n<p>    \u2026problems\
+            \ in unit tests<br/>\n    See:<br/>\n    <a href=\"https://issues.apache.org/jira/browse/NIFI-1656\"\
+            \ class=\"external-link\" rel=\"nofollow\">https://issues.apache.org/jira/browse/NIFI-1656</a></p>\n\
+            \n<p>You can merge this pull request into a Git repository by running:</p>\n\
+            \n<p>    $ git pull <a href=\"https://github.com/trkurc/nifi\" class=\"\
+            external-link\" target=\"_blank\" rel=\"nofollow noopener\">https://github.com/trkurc/nifi</a>\
+            \ <a href=\"https://issues.apache.org/jira/browse/NIFI-1656\" title=\"\
+            Kite processor scanner usage presumes a particular locale\" class=\"issue-link\"\
+            \ data-issue-key=\"NIFI-1656\"><del>NIFI-1656</del></a></p>\n\n<p>Alternatively\
+            \ you can review and apply these changes as the patch at:</p>\n\n<p> \
+            \   <a href=\"https://github.com/apache/nifi/pull/292.patch\" class=\"\
+            external-link\" target=\"_blank\" rel=\"nofollow noopener\">https://github.com/apache/nifi/pull/292.patch</a></p>\n\
+            \n<p>To close this pull request, make a commit to your master/trunk branch<br/>\n\
+            with (at least) the following in the commit message:</p>\n\n<p>    This\
+            \ closes #292</p>\n\n<hr />\n<p>commit 56832747d365ca87ecc51660e3d9637d9dee825f<br/>\n\
+            Author: trkurc &lt;tkurc@gizmolabs.org&gt;<br/>\nDate:   2016-03-20T22:25:04Z</p>\n\
+            \n<p>    <a href=\"https://issues.apache.org/jira/browse/NIFI-1656\" title=\"\
+            Kite processor scanner usage presumes a particular locale\" class=\"issue-link\"\
+            \ data-issue-key=\"NIFI-1656\"><del>NIFI-1656</del></a> Added locale support\
+            \ to ConvertAvroSchema and fixed locale problems in unit tests</p>\n\n\
+            <hr />"
+          '@author': githubbot
+          '@created': Sun, 20 Mar 2016 22:32:51 +0000
+          '@id': '15203550'
+        - '#text': <p>I added locale support to the processor as well as making the
+            unit tests work across locales in the PR. If it is desired to take out
+            locale support, I can submit a PR with just the unit tests fixed.</p>
+          '@author': tkurc
+          '@created': Sun, 20 Mar 2016 22:37:34 +0000
+          '@id': '15203553'
+        - '#text': '<p>Github user trkurc commented on the pull request:</p>
+
+
+            <p>    <a href="https://github.com/apache/nifi/pull/292#issuecomment-199051348"
+            class="external-link" target="_blank" rel="nofollow noopener">https://github.com/apache/nifi/pull/292#issuecomment-199051348</a></p>
+
+
+            <p>    @pvillard31 - can you try this one?</p>'
+          '@author': githubbot
+          '@created': Sun, 20 Mar 2016 22:38:02 +0000
+          '@id': '15203554'
+        - '#text': <p>definitely would like to hear from <a href="https://issues.apache.org/jira/secure/ViewProfile.jspa?name=pvillard"
+            class="user-hover" rel="pvillard">pvillard</a> on this but am a +1.  Full
+            clean build w/contrib-check good to go and changes make sense.  Travis-ci
+            is also happy. Thanks!</p>
+          '@author': joewitt
+          '@created': Mon, 21 Mar 2016 01:48:27 +0000
+          '@id': '15203628'
+        - '#text': '<p>Github user pvillard31 commented on the pull request:</p>
+
+
+            <p>    <a href="https://github.com/apache/nifi/pull/292#issuecomment-199134795"
+            class="external-link" target="_blank" rel="nofollow noopener">https://github.com/apache/nifi/pull/292#issuecomment-199134795</a></p>
+
+
+            <p>    Everything OK, I''m a :+1: </p>'
+          '@author': githubbot
+          '@created': Mon, 21 Mar 2016 05:34:50 +0000
+          '@id': '15203747'
+        - '#text': '<p>Commit 9cde92da164393c50d74c4cc4c0d6bf82c975e9c in nifi''s
+            branch refs/heads/master from trkurc<br/>
+
+            [ <a href="https://git-wip-us.apache.org/repos/asf?p=nifi.git;h=9cde92d"
+            class="external-link" target="_blank" rel="nofollow noopener">https://git-wip-us.apache.org/repos/asf?p=nifi.git;h=9cde92d</a>
+            ]</p>
+
+
+            <p><a href="https://issues.apache.org/jira/browse/NIFI-1656" title="Kite
+            processor scanner usage presumes a particular locale" class="issue-link"
+            data-issue-key="NIFI-1656"><del>NIFI-1656</del></a> Added locale support
+            to ConvertAvroSchema and fixed locale problems in unit tests</p>
+
+
+            <p>Reviewed by Joe Witt (joewitt@apache.org). This closes #292</p>'
+          '@author': jira-bot
+          '@created': Mon, 21 Mar 2016 05:46:23 +0000
+          '@id': '15203753'
+        - '#text': '<p>Github user asfgit closed the pull request at:</p>
+
+
+            <p>    <a href="https://github.com/apache/nifi/pull/292" class="external-link"
+            target="_blank" rel="nofollow noopener">https://github.com/apache/nifi/pull/292</a></p>'
+          '@author': githubbot
+          '@created': Mon, 21 Mar 2016 05:46:37 +0000
+          '@id': '15203754'
+        - '#text': '<p>Github user trkurc commented on the pull request:</p>
+
+
+            <p>    <a href="https://github.com/apache/nifi/pull/292#issuecomment-199137191"
+            class="external-link" target="_blank" rel="nofollow noopener">https://github.com/apache/nifi/pull/292#issuecomment-199137191</a></p>
+
+
+            <p>    Thanks for following up, @pvillard31 . I think maybe building with
+            other default locales may be worth exploring to add to travis-ci (tagging
+            @apiri who may know if that''s possible (I added -Duser.language=fr -Duser.region=FR
+            to my env when testing))</p>'
+          '@author': githubbot
+          '@created': Mon, 21 Mar 2016 05:52:45 +0000
+          '@id': '15203761'
+        - '#text': '<p>Github user apiri commented on the pull request:</p>
+
+
+            <p>    <a href="https://github.com/apache/nifi/pull/292#issuecomment-199261919"
+            class="external-link" target="_blank" rel="nofollow noopener">https://github.com/apache/nifi/pull/292#issuecomment-199261919</a></p>
+
+
+            <p>    Yeah, can certainly figure something out with the build matrix.</p>'
+          '@author': githubbot
+          '@created': Mon, 21 Mar 2016 13:03:16 +0000
+          '@id': '15204143'
+        - '#text': '<p>Github user apiri commented on the pull request:</p>
+
+
+            <p>    <a href="https://github.com/apache/nifi/pull/292#issuecomment-199315775"
+            class="external-link" target="_blank" rel="nofollow noopener">https://github.com/apache/nifi/pull/292#issuecomment-199315775</a></p>
+
+
+            <p>    Created a ticket to handle this task:  <a href="https://issues.apache.org/jira/browse/NIFI-1657"
+            class="external-link" rel="nofollow">https://issues.apache.org/jira/browse/NIFI-1657</a></p>'
+          '@author': githubbot
+          '@created': Mon, 21 Mar 2016 14:31:21 +0000
+          '@id': '15204349'
+      created: Sun, 20 Mar 2016 19:29:08 +0000
+      customfields:
+        customfield:
+        - '@id': customfield_12310310
+          '@key': com.atlassian.jira.toolkit:attachments
+          customfieldname: Attachment count
+          customfieldvalues:
+            customfieldvalue: '0.0'
+        - '@id': customfield_12314020
+          '@key': com.atlassian.jira.plugins.jira-development-integration-plugin:devsummary
+          customfieldname: Development
+          customfieldvalues: null
+        - '@id': customfield_12313422
+          '@key': com.atlassian.jirafisheyeplugin:jobcheckbox
+          customfieldname: Enable Automatic Patch Review
+          customfieldvalues:
+            customfieldvalue: 'false'
+        - '@id': customfield_12310420
+          '@key': com.pyxis.greenhopper.jira:gh-global-rank
+          customfieldname: Global Rank
+          customfieldvalues:
+            customfieldvalue: '9223372036854775807'
+        - '@id': customfield_12312521
+          '@key': com.atlassian.jira.toolkit:LastCommentDate
+          customfieldname: Last public comment date
+          customfieldvalues: 9 years, 18 weeks, 2 days ago
+        - '@id': customfield_12311820
+          '@key': com.pyxis.greenhopper.jira:gh-lexo-rank
+          customfieldname: Rank
+          customfieldvalues:
+            customfieldvalue: '0|i2uxmv:'
+        - '@id': customfield_12310920
+          '@key': com.pyxis.greenhopper.jira:gh-global-rank
+          customfieldname: Rank (Obsolete)
+          customfieldvalues:
+            customfieldvalue: '9223372036854775807'
+      description: "<p>This is a JIRA which spawned from the discussion/review efforts\
+        \ folks did on <a href=\"https://issues.apache.org/jira/browse/NIFI-1651\"\
+        \ title=\"nifi-kite-processors unit tests broken on windows\" class=\"issue-link\"\
+        \ data-issue-key=\"NIFI-1651\"><del>NIFI-1651</del></a>.</p>\n\n<p>Sorry for\
+        \ the delay... I am on a different computer than usual and forgot to check\
+        \ the git property. Did a full clone again (so slow with airport wifi...)\
+        \ and checked the schema (looks OK to me). The git property solved most of\
+        \ the issues, but some are remaining:</p>\n\n<p>Running org.apache.nifi.processors.kite.TestAvroRecordConverter<br/>\n\
+        Tests run: 4, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.377 sec\
+        \ &lt;&lt;&lt; FAILURE! - in org.apache.nifi.processors.kite.TestAvroRecordConverter<br/>\n\
+        testDefaultConversion(org.apache.nifi.processors.kite.TestAvroRecordConverter)\
+        \  Time elapsed: 0.011 sec  &lt;&lt;&lt; ERROR!<br/>\norg.apache.nifi.processors.kite.AvroRecordConverter$AvroConversionException:\
+        \ Cannot convert 5.5 to double<br/>\n        at org.apache.nifi.processors.kite.AvroRecordConverter.convertData(AvroRecordConverter.java:246)<br/>\n\
+        \        at org.apache.nifi.processors.kite.AvroRecordConverter.convert(AvroRecordConverter.java:170)<br/>\n\
+        \        at org.apache.nifi.processors.kite.TestAvroRecordConverter.testDefaultConversion(TestAvroRecordConverter.java:98)</p>\n\
+        \n<p>Running org.apache.nifi.processors.kite.TestConfigurationProperty<br/>\n\
+        Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.849 sec\
+        \ - in org.apache.nifi.processors.kite.TestConfigurationProperty<br/>\nRunning\
+        \ org.apache.nifi.processors.kite.TestConvertAvroSchema<br/>\nTests run: 2,\
+        \ Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.22 sec &lt;&lt;&lt;\
+        \ FAILURE! - in org.apache.nifi.processors.kite.TestConvertAvroSchema<br/>\n\
+        testBasicConversion(org.apache.nifi.processors.kite.TestConvertAvroSchema)\
+        \  Time elapsed: 0.21 sec  &lt;&lt;&lt; FAILURE!<br/>\njava.lang.AssertionError:\
+        \ Should convert 2 rows expected:&lt;2&gt; but was:&lt;1&gt;<br/>\n      \
+        \  at org.junit.Assert.fail(Assert.java:88)<br/>\n        at org.junit.Assert.failNotEquals(Assert.java:834)<br/>\n\
+        \        at org.junit.Assert.assertEquals(Assert.java:645)<br/>\n        at\
+        \ org.apache.nifi.processors.kite.TestConvertAvroSchema.testBasicConversion(TestConvertAvroSchema.java:78)</p>\n\
+        \n\n<p>Just for the record, the error is because of my local env. This is\
+        \ fixed by setting the locale to US on the scanner:</p>\n\n<p>scanner.useLocale(java.util.Locale.US);</p>\n\
+        \n<p>I don't know if there is a way to set this at a global scale.</p>"
+      due: null
+      environment: Windows 7 pro, maven 3.3.9, Java 8
+      issuelinks:
+        issuelinktype:
+          '@id': '10030'
+          inwardlinks:
+            '@description': is related to
+            issuelink:
+              issuekey:
+                '#text': NIFI-1657
+                '@id': '12952049'
+          name: Reference
+      key:
+        '#text': NIFI-1656
+        '@id': '12951825'
+      labels: null
+      link: https://issues.apache.org/jira/browse/NIFI-1656
+      priority:
+        '#text': Major
+        '@iconUrl': https://issues.apache.org/jira/images/icons/priorities/major.svg
+        '@id': '3'
+      project:
+        '#text': Apache NiFi
+        '@id': '12316020'
+        '@key': NIFI
+      reporter:
+        '#text': Pierre Villard
+        '@username': pvillard
+      resolution:
+        '#text': Fixed
+        '@id': '1'
+      resolved: Mon, 21 Mar 2016 05:48:43 +0000
+      status:
+        '#text': Resolved
+        '@description': A resolution has been taken, and it is awaiting verification
+          by reporter. From here issues are either reopened, or are closed.
+        '@iconUrl': https://issues.apache.org/jira/images/icons/statuses/resolved.png
+        '@id': '5'
+      statusCategory:
+        '@colorName': green
+        '@id': '3'
+        '@key': done
+      subtasks: null
+      summary: Kite processor scanner usage presumes a particular locale
+      title: '[NIFI-1656] Kite processor scanner usage presumes a particular locale'
+      type:
+        '#text': Bug
+        '@iconUrl': https://issues.apache.org/jira/secure/viewavatar?size=xsmall&avatarId=21133&avatarType=issuetype
+        '@id': '1'
+      updated: Mon, 21 Mar 2016 14:31:21 +0000
+      votes: '0'
+      watches: '4'
+    language: en-uk
+    link: https://issues.apache.org/jira
+    title: ASF JIRA

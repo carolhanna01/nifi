@@ -1,0 +1,59 @@
+[INFO] Scanning for projects...
+[INFO] Inspecting build with total of 1 modules...
+[INFO] Installing Nexus Staging features:
+[INFO]   ... total of 1 executions of maven-deploy-plugin replaced with nexus-staging-maven-plugin
+[INFO] 
+[INFO] ----------------< org.apache.nifi:nifi-kite-processors >----------------
+[INFO] Building nifi-kite-processors 0.6.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.3.1:enforce (enforce-maven) @ nifi-kite-processors ---
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:1.5:process (default) @ nifi-kite-processors ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.7:resources (default-resources) @ nifi-kite-processors ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 2 resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.2:compile (default-compile) @ nifi-kite-processors ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 9 source files to /home/carol/Downloads/Workspaces/bugs-dot-jar/nifi/nifi-nar-bundles/nifi-kite-bundle/nifi-kite-processors/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.7:testResources (default-testResources) @ nifi-kite-processors ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 7 resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.2:testCompile (default-testCompile) @ nifi-kite-processors ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 10 source files to /home/carol/Downloads/Workspaces/bugs-dot-jar/nifi/nifi-nar-bundles/nifi-kite-bundle/nifi-kite-processors/target/test-classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] bootstrap class path not set in conjunction with -source 1.7
+/home/carol/Downloads/Workspaces/bugs-dot-jar/nifi/nifi-nar-bundles/nifi-kite-bundle/nifi-kite-processors/src/test/java/org/apache/nifi/processors/kite/TestConvertAvroSchema.java:[141,44] error: cannot find symbol
+[ERROR]   symbol:   variable LOCALE
+  location: class ConvertAvroSchema
+/home/carol/Downloads/Workspaces/bugs-dot-jar/nifi/nifi-nar-bundles/nifi-kite-bundle/nifi-kite-processors/src/test/java/org/apache/nifi/processors/kite/TestAvroRecordConverter.java:[90,40] error: constructor AvroRecordConverter in class AvroRecordConverter cannot be applied to given types;
+[INFO] 2 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  3.466 s
+[INFO] Finished at: 2025-07-16T21:27:58+01:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.2:testCompile (default-testCompile) on project nifi-kite-processors: Compilation failure: Compilation failure: 
+[ERROR] bootstrap class path not set in conjunction with -source 1.7
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/nifi/nifi-nar-bundles/nifi-kite-bundle/nifi-kite-processors/src/test/java/org/apache/nifi/processors/kite/TestConvertAvroSchema.java:[141,44] error: cannot find symbol
+[ERROR]   symbol:   variable LOCALE
+[ERROR]   location: class ConvertAvroSchema
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/nifi/nifi-nar-bundles/nifi-kite-bundle/nifi-kite-processors/src/test/java/org/apache/nifi/processors/kite/TestAvroRecordConverter.java:[90,40] error: constructor AvroRecordConverter in class AvroRecordConverter cannot be applied to given types;
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
