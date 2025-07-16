@@ -1,0 +1,219 @@
+rss:
+  '@version': '0.92'
+  channel:
+    build-info:
+      build-date: 22-06-2022
+      build-number: '820010'
+      version: 8.20.10
+    description: This file is an XML representation of an issue
+    item:
+      aggregateprogress:
+        '@percentage': '100'
+        currentProgress:
+          row:
+          - '@backgroundColor': '#51a825'
+            '@percentage': '100'
+          - '@backgroundColor': '#ec8e00'
+            '@percentage': '0'
+        originalProgress:
+          row:
+          - '@backgroundColor': '#89afd7'
+            '@percentage': '0'
+          - '@backgroundColor': transparent
+            '@percentage': '100'
+      assignee:
+        '#text': David Handermann
+        '@username': exceptionfactory
+      attachments: null
+      comments:
+        comment:
+        - '#text': "<p>Commit 4f28b28ba2b8ad049f4477335e9a85135cd0d0c1 in nifi's branch\
+            \ refs/heads/main from David Handermann<br/>\n[ <a href=\"https://gitbox.apache.org/repos/asf?p=nifi.git;h=4f28b28\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >https://gitbox.apache.org/repos/asf?p=nifi.git;h=4f28b28</a> ]</p>\n\n\
+            <p><a href=\"https://issues.apache.org/jira/browse/NIFI-9507\" title=\"\
+            FetchSFTP spawns multiple keep-alive threads on failed connections\" class=\"\
+            issue-link\" data-issue-key=\"NIFI-9507\"><del>NIFI-9507</del></a> This\
+            \ closes #5617. Corrected SSH Client handling on connect failures</p>\n\
+            \n<ul class=\"alternate\" type=\"square\">\n\t<li>Refactored SSH Client\
+            \ configuration and connection to SSHClientProvider</li>\n\t<li>Implemented\
+            \ exception handling for configuration and connection failures</li>\n\t\
+            <li>Named SSH keep-alive thread for improved runtime tracking</li>\n\t\
+            <li>Closed SSH Client and interrupted keep-alive thread on configuration\
+            \ failures</li>\n\t<li>Added missing Compression Property to ListSFTP</li>\n\
+            \t<li>Corrected Hostname and Port property descriptors in ListSFTP</li>\n\
+            </ul>\n\n\n<p>Signed-off-by: Joe Witt &lt;joewitt@apache.org&gt;</p>"
+          '@author': jira-bot
+          '@created': Tue, 21 Dec 2021 03:24:11 +0000
+          '@id': '17462960'
+        - '#text': "<p>Commit 898f9a48bcb75a68a77a8c241821c5d39e75ab24 in nifi's branch\
+            \ refs/heads/support/nifi-1.15 from David Handermann<br/>\n[ <a href=\"\
+            https://gitbox.apache.org/repos/asf?p=nifi.git;h=898f9a4\" class=\"external-link\"\
+            \ target=\"_blank\" rel=\"nofollow noopener\">https://gitbox.apache.org/repos/asf?p=nifi.git;h=898f9a4</a>\
+            \ ]</p>\n\n<p><a href=\"https://issues.apache.org/jira/browse/NIFI-9507\"\
+            \ title=\"FetchSFTP spawns multiple keep-alive threads on failed connections\"\
+            \ class=\"issue-link\" data-issue-key=\"NIFI-9507\"><del>NIFI-9507</del></a>\
+            \ Corrected SSH Client handling on connect failures</p>\n\n<ul class=\"\
+            alternate\" type=\"square\">\n\t<li>Refactored SSH Client configuration\
+            \ and connection to SSHClientProvider</li>\n\t<li>Implemented exception\
+            \ handling for configuration and connection failures</li>\n\t<li>Named\
+            \ SSH keep-alive thread for improved runtime tracking</li>\n\t<li>Closed\
+            \ SSH Client and interrupted keep-alive thread on configuration failures</li>\n\
+            \t<li>Added missing Compression Property to ListSFTP</li>\n\t<li>Corrected\
+            \ Hostname and Port property descriptors in ListSFTP</li>\n</ul>"
+          '@author': jira-bot
+          '@created': Tue, 21 Dec 2021 03:24:40 +0000
+          '@id': '17462962'
+        - '#text': "<p>Commit 4f28b28ba2b8ad049f4477335e9a85135cd0d0c1 in nifi's branch\
+            \ refs/heads/<a href=\"https://issues.apache.org/jira/browse/NIFI-9428\"\
+            \ title=\"Implement C2 Protocol, Client, and Server\" class=\"issue-link\"\
+            \ data-issue-key=\"NIFI-9428\">NIFI-9428</a> from David Handermann<br/>\n\
+            [ <a href=\"https://gitbox.apache.org/repos/asf?p=nifi.git;h=4f28b28\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >https://gitbox.apache.org/repos/asf?p=nifi.git;h=4f28b28</a> ]</p>\n\n\
+            <p><a href=\"https://issues.apache.org/jira/browse/NIFI-9507\" title=\"\
+            FetchSFTP spawns multiple keep-alive threads on failed connections\" class=\"\
+            issue-link\" data-issue-key=\"NIFI-9507\"><del>NIFI-9507</del></a> This\
+            \ closes #5617. Corrected SSH Client handling on connect failures</p>\n\
+            \n<ul class=\"alternate\" type=\"square\">\n\t<li>Refactored SSH Client\
+            \ configuration and connection to SSHClientProvider</li>\n\t<li>Implemented\
+            \ exception handling for configuration and connection failures</li>\n\t\
+            <li>Named SSH keep-alive thread for improved runtime tracking</li>\n\t\
+            <li>Closed SSH Client and interrupted keep-alive thread on configuration\
+            \ failures</li>\n\t<li>Added missing Compression Property to ListSFTP</li>\n\
+            \t<li>Corrected Hostname and Port property descriptors in ListSFTP</li>\n\
+            </ul>\n\n\n<p>Signed-off-by: Joe Witt &lt;joewitt@apache.org&gt;</p>"
+          '@author': jira-bot
+          '@created': Tue, 4 Jan 2022 16:40:42 +0000
+          '@id': '17468725'
+      component: Extensions
+      created: Mon, 20 Dec 2021 16:24:47 +0000
+      customfields:
+        customfield:
+        - '@id': customfield_12310310
+          '@key': com.atlassian.jira.toolkit:attachments
+          customfieldname: Attachment count
+          customfieldvalues:
+            customfieldvalue: '0.0'
+        - '@id': customfield_12314020
+          '@key': com.atlassian.jira.plugins.jira-development-integration-plugin:devsummary
+          customfieldname: Development
+          customfieldvalues: null
+        - '@id': customfield_12313422
+          '@key': com.atlassian.jirafisheyeplugin:jobcheckbox
+          customfieldname: Enable Automatic Patch Review
+          customfieldvalues:
+            customfieldvalue: 'false'
+        - '@id': customfield_12310420
+          '@key': com.pyxis.greenhopper.jira:gh-global-rank
+          customfieldname: Global Rank
+          customfieldvalues:
+            customfieldvalue: '9223372036854775807'
+        - '@id': customfield_12312521
+          '@key': com.atlassian.jira.toolkit:LastCommentDate
+          customfieldname: Last public comment date
+          customfieldvalues: 3 years, 28 weeks ago
+        - '@id': customfield_12311820
+          '@key': com.pyxis.greenhopper.jira:gh-lexo-rank
+          customfieldname: Rank
+          customfieldvalues:
+            customfieldvalue: '0|z0xweg:'
+        - '@id': customfield_12310920
+          '@key': com.pyxis.greenhopper.jira:gh-global-rank
+          customfieldname: Rank (Obsolete)
+          customfieldvalues:
+            customfieldvalue: '9223372036854775807'
+      description: "<p>The <tt>FetchSFTP</tt> processor relies on the shared <tt>SFTPTransfer</tt>\
+        \ class to handle SFTP communication using the SSHJ library starting in NiFi\
+        \ 1.12.0.\_ The <tt>SFTPTransfer</tt> class instantiates and configures an\
+        \ <tt>SSHClient</tt> based on processor properties, calling the <tt>connect</tt>\
+        \ method after initial configuration.</p>\n\n<p>The <tt>SSHClient.connect</tt>\
+        \ method can throw an <tt>IOException</tt> on failure to reach the remote\
+        \ SFTP server, but the NiFi <tt>SFTPTransfer</tt> class does not close in\
+        \ the <tt>SSHClient</tt>.\_ Although <tt>FetchSFTP</tt> catches the <tt>IOException</tt>\
+        \ in the parent <tt>FetchFileTransfer.onTrigger</tt> method, the processor\
+        \ never closes the failed <tt>SSHClient</tt> because <tt>SFTPTransfer</tt>\
+        \ never assigned the instance variable.</p>\n\n<p>The creation and lifecycle\
+        \ of the <tt>SSHClient</tt> inside <tt>SFTPTransfer</tt> should be adjusted\
+        \ to ensure closure of <tt>SSHClient</tt> and the associated keep-alive thread.</p>"
+      due: null
+      environment: null
+      fixVersion:
+      - 1.16.0
+      - 1.15.2
+      issuelinks:
+        issuelinktype:
+          '@id': '10030'
+          inwardlinks:
+            '@description': is related to
+            issuelink:
+              issuekey:
+                '#text': NIFI-7443
+                '@id': '13304572'
+          name: Reference
+      key:
+        '#text': NIFI-9507
+        '@id': '13418655'
+      labels: null
+      link: https://issues.apache.org/jira/browse/NIFI-9507
+      priority:
+        '#text': Major
+        '@iconUrl': https://issues.apache.org/jira/images/icons/priorities/major.svg
+        '@id': '3'
+      progress:
+        '@percentage': '100'
+        currentProgress:
+          row:
+          - '@backgroundColor': '#51a825'
+            '@percentage': '100'
+          - '@backgroundColor': '#ec8e00'
+            '@percentage': '0'
+        originalProgress:
+          row:
+          - '@backgroundColor': '#89afd7'
+            '@percentage': '0'
+          - '@backgroundColor': transparent
+            '@percentage': '100'
+      project:
+        '#text': Apache NiFi
+        '@id': '12316020'
+        '@key': NIFI
+      reporter:
+        '#text': David Handermann
+        '@username': exceptionfactory
+      resolution:
+        '#text': Fixed
+        '@id': '1'
+      resolved: Tue, 21 Dec 2021 03:24:45 +0000
+      status:
+        '#text': Resolved
+        '@description': A resolution has been taken, and it is awaiting verification
+          by reporter. From here issues are either reopened, or are closed.
+        '@iconUrl': https://issues.apache.org/jira/images/icons/statuses/resolved.png
+        '@id': '5'
+      statusCategory:
+        '@colorName': green
+        '@id': '3'
+        '@key': done
+      subtasks: null
+      summary: FetchSFTP spawns multiple keep-alive threads on failed connections
+      timeestimate:
+        '#text': 0h
+        '@seconds': '0'
+      timespent:
+        '#text': 0.5h
+        '@seconds': '1800'
+      title: '[NIFI-9507] FetchSFTP spawns multiple keep-alive threads on failed connections'
+      type:
+        '#text': Bug
+        '@iconUrl': https://issues.apache.org/jira/secure/viewavatar?size=xsmall&avatarId=21133&avatarType=issuetype
+        '@id': '1'
+      updated: Tue, 4 Jan 2022 16:40:42 +0000
+      version:
+      - 1.12.0
+      - 1.15.1
+      votes: '0'
+      watches: '2'
+    language: en-uk
+    link: https://issues.apache.org/jira
+    title: ASF JIRA

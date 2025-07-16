@@ -1,0 +1,141 @@
+[INFO] Scanning for projects...
+[INFO] Inspecting build with total of 1 modules...
+[INFO] Installing Nexus Staging features:
+[INFO]   ... total of 1 executions of maven-deploy-plugin replaced with nexus-staging-maven-plugin
+[INFO] 
+[INFO] --------------< org.apache.nifi:nifi-standard-processors >--------------
+[INFO] Building nifi-standard-processors 1.16.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] The artifact junit:junit-dep:jar:4.11-beta-1 has been relocated to junit:junit:jar:4.11-beta-1: The artifact junit:junit does not contain Hamcrest anymore but declares a dependency to Hamcrest. Thus, junit:junit-dep has become obsolete.
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.0.0:enforce (enforce-maven-version) @ nifi-standard-processors ---
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.0.0:enforce (enforce-maven) @ nifi-standard-processors ---
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.0.0:enforce (enforce-no-snapshots) @ nifi-standard-processors ---
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.0.0:enforce (enforce-banned-dependencies) @ nifi-standard-processors ---
+[INFO] 
+[INFO] --- buildnumber-maven-plugin:1.4:create (default) @ nifi-standard-processors ---
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:1.7.0:process (process-resource-bundles) @ nifi-standard-processors ---
+[INFO] Preparing remote bundle org.apache:apache-jar-resource-bundle:1.4
+[INFO] Copying 3 resources from 1 bundle.
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ nifi-standard-processors ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 38 resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ nifi-standard-processors ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 213 source files to /home/carol/Downloads/Workspaces/bugs-dot-jar/nifi/nifi-nar-bundles/nifi-standard-bundle/nifi-standard-processors/target/classes
+[WARNING] /home/carol/Downloads/Workspaces/bugs-dot-jar/nifi/nifi-nar-bundles/nifi-standard-bundle/nifi-standard-processors/src/main/java/org/apache/nifi/processors/standard/QueryRecord.java:[551,43] [deprecation] configBuilder() in SqlParser has been deprecated
+[WARNING] /home/carol/Downloads/Workspaces/bugs-dot-jar/nifi/nifi-nar-bundles/nifi-standard-bundle/nifi-standard-processors/src/main/java/org/apache/nifi/processors/standard/EvaluateXPath.java:[245,24] [deprecation] XMLReaderFactory in org.xml.sax.helpers has been deprecated
+[WARNING] /home/carol/Downloads/Workspaces/bugs-dot-jar/nifi/nifi-nar-bundles/nifi-standard-bundle/nifi-standard-processors/src/main/java/org/apache/nifi/queryrecord/FlowFileTableScan.java:[52,8] [deprecation] TableScan(RelOptCluster,RelTraitSet,RelOptTable) in TableScan has been deprecated
+[WARNING] /home/carol/Downloads/Workspaces/bugs-dot-jar/nifi/nifi-nar-bundles/nifi-standard-bundle/nifi-standard-processors/src/main/java/org/apache/nifi/queryrecord/FlowFileProjectTableScanRule.java:[38,49] [deprecation] none() in RelOptRule has been deprecated
+[WARNING] /home/carol/Downloads/Workspaces/bugs-dot-jar/nifi/nifi-nar-bundles/nifi-standard-bundle/nifi-standard-processors/src/main/java/org/apache/nifi/queryrecord/FlowFileProjectTableScanRule.java:[38,16] [deprecation] <R>operand(Class<R>,RelOptRuleOperandChildren) in RelOptRule has been deprecated
+  where R is a type-variable:
+    R extends RelNode declared in method <R>operand(Class<R>,RelOptRuleOperandChildren)
+[WARNING] /home/carol/Downloads/Workspaces/bugs-dot-jar/nifi/nifi-nar-bundles/nifi-standard-bundle/nifi-standard-processors/src/main/java/org/apache/nifi/queryrecord/FlowFileProjectTableScanRule.java:[37,12] [deprecation] <R>operand(Class<R>,RelOptRuleOperand,RelOptRuleOperand...) in RelOptRule has been deprecated
+  where R is a type-variable:
+    R extends RelNode declared in method <R>operand(Class<R>,RelOptRuleOperand,RelOptRuleOperand...)
+[WARNING] /home/carol/Downloads/Workspaces/bugs-dot-jar/nifi/nifi-nar-bundles/nifi-standard-bundle/nifi-standard-processors/src/main/java/org/apache/nifi/processors/standard/ListenTCPRecord.java:[144,12] [deprecation] expressionLanguageSupported(boolean) in Builder has been deprecated
+[WARNING] /home/carol/Downloads/Workspaces/bugs-dot-jar/nifi/nifi-nar-bundles/nifi-standard-bundle/nifi-standard-processors/src/main/java/org/apache/nifi/processors/standard/ListenTCPRecord.java:[153,12] [deprecation] expressionLanguageSupported(boolean) in Builder has been deprecated
+[WARNING] /home/carol/Downloads/Workspaces/bugs-dot-jar/nifi/nifi-nar-bundles/nifi-standard-bundle/nifi-standard-processors/src/main/java/org/apache/nifi/processors/standard/ListenTCPRecord.java:[174,12] [deprecation] expressionLanguageSupported(boolean) in Builder has been deprecated
+[WARNING] /home/carol/Downloads/Workspaces/bugs-dot-jar/nifi/nifi-nar-bundles/nifi-standard-bundle/nifi-standard-processors/src/main/java/org/apache/nifi/processors/standard/EvaluateXQuery.java:[254,24] [deprecation] XMLReaderFactory in org.xml.sax.helpers has been deprecated
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ nifi-standard-processors ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 236 resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ nifi-standard-processors ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 156 source files to /home/carol/Downloads/Workspaces/bugs-dot-jar/nifi/nifi-nar-bundles/nifi-standard-bundle/nifi-standard-processors/target/test-classes
+[INFO] -------------------------------------------------------------
+[WARNING] COMPILATION WARNING : 
+[INFO] -------------------------------------------------------------
+[WARNING] /home/carol/Downloads/Workspaces/bugs-dot-jar/nifi/nifi-nar-bundles/nifi-standard-bundle/nifi-standard-processors/src/test/java/org/apache/nifi/processors/standard/TestReplaceText.java:[42,58] [deprecation] none() in ExpectedException has been deprecated
+[WARNING] /home/carol/Downloads/Workspaces/bugs-dot-jar/nifi/nifi-nar-bundles/nifi-standard-bundle/nifi-standard-processors/src/test/java/org/apache/nifi/processors/standard/TestDebugFlow.java:[49,64] [deprecation] none() in ExpectedException has been deprecated
+[INFO] 2 warnings 
+[INFO] -------------------------------------------------------------
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/nifi/nifi-nar-bundles/nifi-standard-bundle/nifi-standard-processors/src/test/java/org/apache/nifi/processors/standard/ssh/StandardSSHConfigProviderTest.java:[78,12] error: cannot find symbol
+  symbol:   class StandardSSHConfigProvider
+  location: class StandardSSHConfigProviderTest
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/nifi/nifi-nar-bundles/nifi-standard-bundle/nifi-standard-processors/src/test/java/org/apache/nifi/processors/standard/ssh/StandardSSHClientProviderTest.java:[71,12] error: cannot find symbol
+  symbol:   class StandardSSHClientProvider
+  location: class StandardSSHClientProviderTest
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/nifi/nifi-nar-bundles/nifi-standard-bundle/nifi-standard-processors/src/test/java/org/apache/nifi/processors/standard/ssh/ProxySocketFactoryTest.java:[36,14] error: cannot find symbol
+  symbol:   class ProxySocketFactory
+  location: class ProxySocketFactoryTest
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/nifi/nifi-nar-bundles/nifi-standard-bundle/nifi-standard-processors/src/test/java/org/apache/nifi/processors/standard/ssh/ProxySocketFactoryTest.java:[36,53] error: cannot find symbol
+  symbol:   class ProxySocketFactory
+  location: class ProxySocketFactoryTest
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/nifi/nifi-nar-bundles/nifi-standard-bundle/nifi-standard-processors/src/test/java/org/apache/nifi/processors/standard/ssh/StandardSSHConfigProviderTest.java:[85,23] error: cannot find symbol
+  symbol:   class StandardSSHConfigProvider
+  location: class StandardSSHConfigProviderTest
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/nifi/nifi-nar-bundles/nifi-standard-bundle/nifi-standard-processors/src/test/java/org/apache/nifi/processors/standard/ssh/StandardSSHClientProviderTest.java:[101,23] error: cannot find symbol
+  symbol:   class StandardSSHClientProvider
+  location: class StandardSSHClientProviderTest
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/nifi/nifi-nar-bundles/nifi-standard-bundle/nifi-standard-processors/src/test/java/org/apache/nifi/processors/standard/ssh/StandardSSHClientProviderTest.java:[106,14] error: cannot find symbol
+  symbol:   class ClientConfigurationException
+  location: class StandardSSHClientProviderTest
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/nifi/nifi-nar-bundles/nifi-standard-bundle/nifi-standard-processors/src/test/java/org/apache/nifi/processors/standard/ssh/StandardSSHClientProviderTest.java:[106,68] error: cannot find symbol
+  symbol:   class ClientConfigurationException
+  location: class StandardSSHClientProviderTest
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/nifi/nifi-nar-bundles/nifi-standard-bundle/nifi-standard-processors/src/test/java/org/apache/nifi/processors/standard/ssh/StandardSSHClientProviderTest.java:[113,14] error: cannot find symbol
+  symbol:   class ClientConnectException
+  location: class StandardSSHClientProviderTest
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/nifi/nifi-nar-bundles/nifi-standard-bundle/nifi-standard-processors/src/test/java/org/apache/nifi/processors/standard/ssh/StandardSSHClientProviderTest.java:[113,62] error: cannot find symbol
+  symbol:   class ClientConnectException
+  location: class StandardSSHClientProviderTest
+[INFO] 10 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  9.581 s
+[INFO] Finished at: 2025-07-16T09:58:55+01:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project nifi-standard-processors: Compilation failure: Compilation failure: 
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/nifi/nifi-nar-bundles/nifi-standard-bundle/nifi-standard-processors/src/test/java/org/apache/nifi/processors/standard/ssh/StandardSSHConfigProviderTest.java:[78,12] error: cannot find symbol
+[ERROR]   symbol:   class StandardSSHConfigProvider
+[ERROR]   location: class StandardSSHConfigProviderTest
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/nifi/nifi-nar-bundles/nifi-standard-bundle/nifi-standard-processors/src/test/java/org/apache/nifi/processors/standard/ssh/StandardSSHClientProviderTest.java:[71,12] error: cannot find symbol
+[ERROR]   symbol:   class StandardSSHClientProvider
+[ERROR]   location: class StandardSSHClientProviderTest
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/nifi/nifi-nar-bundles/nifi-standard-bundle/nifi-standard-processors/src/test/java/org/apache/nifi/processors/standard/ssh/ProxySocketFactoryTest.java:[36,14] error: cannot find symbol
+[ERROR]   symbol:   class ProxySocketFactory
+[ERROR]   location: class ProxySocketFactoryTest
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/nifi/nifi-nar-bundles/nifi-standard-bundle/nifi-standard-processors/src/test/java/org/apache/nifi/processors/standard/ssh/ProxySocketFactoryTest.java:[36,53] error: cannot find symbol
+[ERROR]   symbol:   class ProxySocketFactory
+[ERROR]   location: class ProxySocketFactoryTest
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/nifi/nifi-nar-bundles/nifi-standard-bundle/nifi-standard-processors/src/test/java/org/apache/nifi/processors/standard/ssh/StandardSSHConfigProviderTest.java:[85,23] error: cannot find symbol
+[ERROR]   symbol:   class StandardSSHConfigProvider
+[ERROR]   location: class StandardSSHConfigProviderTest
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/nifi/nifi-nar-bundles/nifi-standard-bundle/nifi-standard-processors/src/test/java/org/apache/nifi/processors/standard/ssh/StandardSSHClientProviderTest.java:[101,23] error: cannot find symbol
+[ERROR]   symbol:   class StandardSSHClientProvider
+[ERROR]   location: class StandardSSHClientProviderTest
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/nifi/nifi-nar-bundles/nifi-standard-bundle/nifi-standard-processors/src/test/java/org/apache/nifi/processors/standard/ssh/StandardSSHClientProviderTest.java:[106,14] error: cannot find symbol
+[ERROR]   symbol:   class ClientConfigurationException
+[ERROR]   location: class StandardSSHClientProviderTest
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/nifi/nifi-nar-bundles/nifi-standard-bundle/nifi-standard-processors/src/test/java/org/apache/nifi/processors/standard/ssh/StandardSSHClientProviderTest.java:[106,68] error: cannot find symbol
+[ERROR]   symbol:   class ClientConfigurationException
+[ERROR]   location: class StandardSSHClientProviderTest
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/nifi/nifi-nar-bundles/nifi-standard-bundle/nifi-standard-processors/src/test/java/org/apache/nifi/processors/standard/ssh/StandardSSHClientProviderTest.java:[113,14] error: cannot find symbol
+[ERROR]   symbol:   class ClientConnectException
+[ERROR]   location: class StandardSSHClientProviderTest
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/nifi/nifi-nar-bundles/nifi-standard-bundle/nifi-standard-processors/src/test/java/org/apache/nifi/processors/standard/ssh/StandardSSHClientProviderTest.java:[113,62] error: cannot find symbol
+[ERROR]   symbol:   class ClientConnectException
+[ERROR]   location: class StandardSSHClientProviderTest
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
