@@ -87,12 +87,12 @@
                 <artifactId>nifi-ssl-context-service-api</artifactId>
                  <version>1.11.0-SNAPSHOT</version>
         </dependency>
-        <dependency>
+        <!-- <dependency>
                 <groupId>org.apache.nifi</groupId>
                 <artifactId>nifi-standard-services-api-nar</artifactId>
                 <version>1.11.0-SNAPSHOT</version>
                 <type>nar</type>
-        </dependency>
+        </dependency> -->
         <dependency>
                 <groupId>org.eclipse.jetty</groupId>
                 <artifactId>jetty-continuation</artifactId>

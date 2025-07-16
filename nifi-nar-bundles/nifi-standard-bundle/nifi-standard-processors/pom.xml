@@ -212,7 +212,7 @@
             <artifactId>okhttp</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.burgstaller</groupId>
+            <groupId>io.github.rburgst</groupId>
             <artifactId>okhttp-digest</artifactId>
             <type>jar</type>
         </dependency>

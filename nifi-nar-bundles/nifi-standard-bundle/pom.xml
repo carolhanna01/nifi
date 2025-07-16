@@ -278,9 +278,9 @@
                 <version>3.8.1</version>
             </dependency>
             <dependency>
-                <groupId>com.burgstaller</groupId>
+                <groupId>io.github.rburgst</groupId>
                 <artifactId>okhttp-digest</artifactId>
-                <version>1.18</version>
+                <version>3.1.1</version>
                 <type>jar</type>
             </dependency>
             <dependency>
@@ -318,7 +318,7 @@
             <dependency>
                 <groupId>com.fluenda</groupId>
                 <artifactId>ParCEFone</artifactId>
-                <version>1.2.6</version>
+                <version>1.2.0</version>
                 <exclusions>
                     <exclusion>
                         <groupId>org.slf4j</groupId>
