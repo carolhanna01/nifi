@@ -1,0 +1,221 @@
+rss:
+  '@version': '0.92'
+  channel:
+    build-info:
+      build-date: 22-06-2022
+      build-number: '820010'
+      version: 8.20.10
+    description: This file is an XML representation of an issue
+    item:
+      aggregateprogress:
+        '@percentage': '100'
+        currentProgress:
+          row:
+          - '@backgroundColor': '#51a825'
+            '@percentage': '100'
+          - '@backgroundColor': '#ec8e00'
+            '@percentage': '0'
+        originalProgress:
+          row:
+          - '@backgroundColor': '#89afd7'
+            '@percentage': '0'
+          - '@backgroundColor': transparent
+            '@percentage': '100'
+      assignee:
+        '#text': David Handermann
+        '@username': exceptionfactory
+      attachments: null
+      comments:
+        comment:
+        - '#text': <p>This probably breaks both SCRAM-SHA-256 and SCRAM-SHA-512.</p>
+          '@author': andersns
+          '@created': Thu, 1 Dec 2022 13:05:14 +0000
+          '@id': '17641902'
+        - '#text': '<p>Commit c3b0e1a790832cdbb9bc5bec336dc27859313c0e in nifi''s
+            branch refs/heads/main from David Handermann<br/>
+
+            [ <a href="https://gitbox.apache.org/repos/asf?p=nifi.git;h=c3b0e1a790"
+            class="external-link" target="_blank" rel="nofollow noopener">https://gitbox.apache.org/repos/asf?p=nifi.git;h=c3b0e1a790</a>
+            ]</p>
+
+
+            <p><a href="https://issues.apache.org/jira/browse/NIFI-10919" title="Regression
+            in SCRAM SASL Mechanism handling in Kafka Processors" class="issue-link"
+            data-issue-key="NIFI-10919"><del>NIFI-10919</del></a> Corrected SCRAM
+            SASL Mechanism for Kafka Components</p>
+
+
+            <p>This closes #6743<br/>
+
+            Signed-off-by: Paul Grey &lt;greyp@apache.org&gt;</p>'
+          '@author': jira-bot
+          '@created': Thu, 1 Dec 2022 16:30:08 +0000
+          '@id': '17642040'
+        - '#text': '<p>Commit 2b9b9ebb098035eac9ef88ddfd570cba0e79e2b1 in nifi''s
+            branch refs/heads/support/nifi-1.19 from David Handermann<br/>
+
+            [ <a href="https://gitbox.apache.org/repos/asf?p=nifi.git;h=2b9b9ebb09"
+            class="external-link" target="_blank" rel="nofollow noopener">https://gitbox.apache.org/repos/asf?p=nifi.git;h=2b9b9ebb09</a>
+            ]</p>
+
+
+            <p><a href="https://issues.apache.org/jira/browse/NIFI-10919" title="Regression
+            in SCRAM SASL Mechanism handling in Kafka Processors" class="issue-link"
+            data-issue-key="NIFI-10919"><del>NIFI-10919</del></a> Corrected SCRAM
+            SASL Mechanism for Kafka Components</p>
+
+
+            <p>This closes #6743<br/>
+
+            Signed-off-by: Paul Grey &lt;greyp@apache.org&gt;</p>'
+          '@author': jira-bot
+          '@created': Thu, 1 Dec 2022 18:17:06 +0000
+          '@id': '17642099'
+      component: Extensions
+      created: Thu, 1 Dec 2022 13:04:20 +0000
+      customfields:
+        customfield:
+        - '@id': customfield_12310310
+          '@key': com.atlassian.jira.toolkit:attachments
+          customfieldname: Attachment count
+          customfieldvalues:
+            customfieldvalue: '0.0'
+        - '@id': customfield_12314020
+          '@key': com.atlassian.jira.plugins.jira-development-integration-plugin:devsummary
+          customfieldname: Development
+          customfieldvalues: null
+        - '@id': customfield_12313422
+          '@key': com.atlassian.jirafisheyeplugin:jobcheckbox
+          customfieldname: Enable Automatic Patch Review
+          customfieldvalues:
+            customfieldvalue: 'false'
+        - '@id': customfield_12310420
+          '@key': com.pyxis.greenhopper.jira:gh-global-rank
+          customfieldname: Global Rank
+          customfieldvalues:
+            customfieldvalue: '9223372036854775807'
+        - '@id': customfield_12312521
+          '@key': com.atlassian.jira.toolkit:LastCommentDate
+          customfieldname: Last public comment date
+          customfieldvalues: 2 years, 32 weeks, 5 days ago
+        - '@id': customfield_12311820
+          '@key': com.pyxis.greenhopper.jira:gh-lexo-rank
+          customfieldname: Rank
+          customfieldvalues:
+            customfieldvalue: '0|z1d214:'
+        - '@id': customfield_12310920
+          '@key': com.pyxis.greenhopper.jira:gh-global-rank
+          customfieldname: Rank (Obsolete)
+          customfieldvalues:
+            customfieldvalue: '9223372036854775807'
+      description: "<p>Just attempted to upgrade from version 1.17.0 to 1.19.0, and\
+        \ I'm now getting the following error message in ConsumeKafkaRecord_2_6:</p>\n\
+        <div class=\"code panel\" style=\"border-width: 1px;\"><div class=\"codeContent\
+        \ panelContent\">\n<pre class=\"code-java\">\n2022-12-01 13:16:31,886 ERROR\
+        \ [Timer-Driven <span class=\"code-object\">Process</span> <span class=\"\
+        code-object\">Thread</span>-10] o.a.n.p.k.pubsub.ConsumeKafkaRecord_2_6 ConsumeKafkaRecord_2_6[id=8cd134b7-ae49-19d2-0000-00007edbb2f4]\
+        \ Processing halted: yielding [1 sec]\njava.lang.IllegalArgumentException:\
+        \ No <span class=\"code-keyword\">enum</span> constant org.apache.nifi.kafka.shared.property.SaslMechanism.SCRAM-SHA-512\n\
+        \        at java.base/java.lang.Enum.valueOf(Enum.java:240)\n        at org.apache.nifi.kafka.shared.property.SaslMechanism.valueOf(SaslMechanism.java:24)\n\
+        \        at org.apache.nifi.kafka.shared.login.DelegatingLoginConfigProvider.getConfiguration(DelegatingLoginConfigProvider.java:50)\n\
+        \        at org.apache.nifi.kafka.shared.property.provider.StandardKafkaPropertyProvider.setSecurityProperties(StandardKafkaPropertyProvider.java:83)\n\
+        \        at org.apache.nifi.kafka.shared.property.provider.StandardKafkaPropertyProvider.getProperties(StandardKafkaPropertyProvider.java:72)\n\
+        \        at org.apache.nifi.processors.kafka.pubsub.ConsumeKafkaRecord_2_6.createConsumerPool(ConsumeKafkaRecord_2_6.java:427)\n\
+        \        at org.apache.nifi.processors.kafka.pubsub.ConsumeKafkaRecord_2_6.getConsumerPool(ConsumeKafkaRecord_2_6.java:399)\n\
+        \        at org.apache.nifi.processors.kafka.pubsub.ConsumeKafkaRecord_2_6.onTrigger(ConsumeKafkaRecord_2_6.java:519)\n\
+        \        at org.apache.nifi.processor.AbstractProcessor.onTrigger(AbstractProcessor.java:27)\n\
+        \        at org.apache.nifi.controller.StandardProcessorNode.onTrigger(StandardProcessorNode.java:1356)\n\
+        \        at org.apache.nifi.controller.tasks.ConnectableTask.invoke(ConnectableTask.java:246)\n\
+        \        at org.apache.nifi.controller.scheduling.TimerDrivenSchedulingAgent$1.run(TimerDrivenSchedulingAgent.java:102)\n\
+        \        at org.apache.nifi.engine.FlowEngine$2.run(FlowEngine.java:110)\n\
+        \        at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)\n\
+        \        at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)\n\
+        \        at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)\n\
+        \        at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)\n\
+        \        at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)\n\
+        \        at java.base/java.lang.<span class=\"code-object\">Thread</span>.run(<span\
+        \ class=\"code-object\">Thread</span>.java:829)\n</pre>\n</div></div>\n<p>I'm\
+        \ guessing this might be related to <a href=\"https://issues.apache.org/jira/browse/NIFI-10819\"\
+        \ class=\"external-link\" rel=\"nofollow\">https://issues.apache.org/jira/browse/NIFI-10819</a>.\
+        \ I don't speak Java, but guessing it might further be related to <a href=\"\
+        https://github.com/apache/nifi/pull/6690/commits/23eac09f05354aa6775e8504fd94ca2bb8c44c62#diff-e3bf34d8321c19887e4e1d2d3474eccfeb55d13ee7f5efbcaaa8964813c2485aR31\"\
+        \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\">https://github.com/apache/nifi/pull/6690/commits/23eac09f05354aa6775e8504fd94ca2bb8c44c62#diff-e3bf34d8321c19887e4e1d2d3474eccfeb55d13ee7f5efbcaaa8964813c2485aR31</a><br/>\n\
+        Should either the value be SCRAM_SHA_512 or the name of the property/variable/whateveritsnamedinjava\
+        \ be SCRAM-SHA-512?</p>"
+      due: null
+      environment: null
+      fixVersion: 1.19.1
+      issuelinks:
+        issuelinktype:
+          '@id': '10030'
+          name: Reference
+          outwardlinks:
+            '@description': relates to
+            issuelink:
+              issuekey:
+                '#text': NIFI-10819
+                '@id': '13502550'
+      key:
+        '#text': NIFI-10919
+        '@id': '13507847'
+      labels: null
+      link: https://issues.apache.org/jira/browse/NIFI-10919
+      priority:
+        '#text': Critical
+        '@iconUrl': https://issues.apache.org/jira/images/icons/priorities/critical.svg
+        '@id': '2'
+      progress:
+        '@percentage': '100'
+        currentProgress:
+          row:
+          - '@backgroundColor': '#51a825'
+            '@percentage': '100'
+          - '@backgroundColor': '#ec8e00'
+            '@percentage': '0'
+        originalProgress:
+          row:
+          - '@backgroundColor': '#89afd7'
+            '@percentage': '0'
+          - '@backgroundColor': transparent
+            '@percentage': '100'
+      project:
+        '#text': Apache NiFi
+        '@id': '12316020'
+        '@key': NIFI
+      reporter:
+        '#text': Anders
+        '@username': andersns
+      resolution:
+        '#text': Fixed
+        '@id': '1'
+      resolved: Thu, 1 Dec 2022 19:15:03 +0000
+      status:
+        '#text': Resolved
+        '@description': A resolution has been taken, and it is awaiting verification
+          by reporter. From here issues are either reopened, or are closed.
+        '@iconUrl': https://issues.apache.org/jira/images/icons/statuses/resolved.png
+        '@id': '5'
+      statusCategory:
+        '@colorName': green
+        '@id': '3'
+        '@key': done
+      subtasks: null
+      summary: Regression in SCRAM SASL Mechanism handling in Kafka Processors
+      timeestimate:
+        '#text': 0h
+        '@seconds': '0'
+      timespent:
+        '#text': 1h 10m
+        '@seconds': '4200'
+      title: '[NIFI-10919] Regression in SCRAM SASL Mechanism handling in Kafka Processors'
+      type:
+        '#text': Bug
+        '@iconUrl': https://issues.apache.org/jira/secure/viewavatar?size=xsmall&avatarId=21133&avatarType=issuetype
+        '@id': '1'
+      updated: Thu, 1 Dec 2022 19:15:03 +0000
+      version: 1.19.0
+      votes: '0'
+      watches: '2'
+    language: en-uk
+    link: https://issues.apache.org/jira
+    title: ASF JIRA
