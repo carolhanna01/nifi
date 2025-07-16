@@ -1,0 +1,111 @@
+[INFO] Scanning for projects...
+[INFO] Inspecting build with total of 1 modules...
+[INFO] Installing Nexus Staging features:
+[INFO]   ... total of 1 executions of maven-deploy-plugin replaced with nexus-staging-maven-plugin
+[INFO] 
+[INFO] -------------< org.apache.nifi:nifi-kafka-0-9-processors >--------------
+[INFO] Building nifi-kafka-0-9-processors 1.0.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.3.1:enforce (enforce-maven) @ nifi-kafka-0-9-processors ---
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:1.5:process (default) @ nifi-kafka-0-9-processors ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.7:resources (default-resources) @ nifi-kafka-0-9-processors ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 3 resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.2:compile (default-compile) @ nifi-kafka-0-9-processors ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.7:testResources (default-testResources) @ nifi-kafka-0-9-processors ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 3 resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.2:testCompile (default-testCompile) @ nifi-kafka-0-9-processors ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 9 source files to /home/carol/Downloads/Workspaces/bugs-dot-jar/nifi/nifi-nar-bundles/nifi-kafka-bundle/nifi-kafka-0-9-processors/target/test-classes
+[INFO] -------------------------------------------------------------
+[WARNING] COMPILATION WARNING : 
+[INFO] -------------------------------------------------------------
+[WARNING] /home/carol/Downloads/Workspaces/bugs-dot-jar/nifi/nifi-nar-bundles/nifi-kafka-bundle/nifi-kafka-0-9-processors/src/test/java/org/apache/nifi/processors/kafka/pubsub/TestUtils.java:[22,15] Unsafe is internal proprietary API and may be removed in a future release
+[WARNING]   symbol:   variable KAFKA_KEY
+  location: class KafkaProcessorUtils
+/home/carol/Downloads/Workspaces/bugs-dot-jar/nifi/nifi-nar-bundles/nifi-kafka-bundle/nifi-kafka-0-9-processors/src/test/java/org/apache/nifi/processors/kafka/pubsub/TestUtils.java:[35,11] Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /home/carol/Downloads/Workspaces/bugs-dot-jar/nifi/nifi-nar-bundles/nifi-kafka-bundle/nifi-kafka-0-9-processors/src/test/java/org/apache/nifi/processors/kafka/pubsub/TestUtils.java:[37,22] Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /home/carol/Downloads/Workspaces/bugs-dot-jar/nifi/nifi-nar-bundles/nifi-kafka-bundle/nifi-kafka-0-9-processors/src/test/java/org/apache/nifi/processors/kafka/pubsub/TestUtils.java:[39,20] Unsafe is internal proprietary API and may be removed in a future release
+[INFO] 4 warnings 
+[INFO] -------------------------------------------------------------
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/nifi/nifi-nar-bundles/nifi-kafka-bundle/nifi-kafka-0-9-processors/src/test/java/org/apache/nifi/processors/kafka/pubsub/ConsumeKafkaTest.java:[556,88] error: cannot find symbol
+[ERROR]   symbol:   variable KAFKA_KEY
+  location: class KafkaProcessorUtils
+/home/carol/Downloads/Workspaces/bugs-dot-jar/nifi/nifi-nar-bundles/nifi-kafka-bundle/nifi-kafka-0-9-processors/src/test/java/org/apache/nifi/processors/kafka/pubsub/ConsumeKafkaTest.java:[557,88] error: cannot find symbol
+[ERROR]   symbol:   variable KAFKA_KEY
+  location: class KafkaProcessorUtils
+/home/carol/Downloads/Workspaces/bugs-dot-jar/nifi/nifi-nar-bundles/nifi-kafka-bundle/nifi-kafka-0-9-processors/src/test/java/org/apache/nifi/processors/kafka/pubsub/ConsumeKafkaTest.java:[558,88] error: cannot find symbol
+[ERROR]   symbol:   variable KAFKA_KEY
+  location: class KafkaProcessorUtils
+/home/carol/Downloads/Workspaces/bugs-dot-jar/nifi/nifi-nar-bundles/nifi-kafka-bundle/nifi-kafka-0-9-processors/src/test/java/org/apache/nifi/processors/kafka/pubsub/ConsumeKafkaTest.java:[601,39] error: cannot find symbol
+[ERROR]   symbol:   variable KEY_ATTRIBUTE_ENCODING
+  location: class ConsumeKafka
+/home/carol/Downloads/Workspaces/bugs-dot-jar/nifi/nifi-nar-bundles/nifi-kafka-bundle/nifi-kafka-0-9-processors/src/test/java/org/apache/nifi/processors/kafka/pubsub/ConsumeKafkaTest.java:[601,76] error: cannot find symbol
+[ERROR]   symbol:   variable HEX_ENCODING
+  location: class ConsumeKafka
+/home/carol/Downloads/Workspaces/bugs-dot-jar/nifi/nifi-nar-bundles/nifi-kafka-bundle/nifi-kafka-0-9-processors/src/test/java/org/apache/nifi/processors/kafka/pubsub/ConsumeKafkaTest.java:[615,88] error: cannot find symbol
+[ERROR]   symbol:   variable KAFKA_KEY
+  location: class KafkaProcessorUtils
+/home/carol/Downloads/Workspaces/bugs-dot-jar/nifi/nifi-nar-bundles/nifi-kafka-bundle/nifi-kafka-0-9-processors/src/test/java/org/apache/nifi/processors/kafka/pubsub/ConsumeKafkaTest.java:[616,88] error: cannot find symbol
+[ERROR]   symbol:   variable KAFKA_KEY
+  location: class KafkaProcessorUtils
+/home/carol/Downloads/Workspaces/bugs-dot-jar/nifi/nifi-nar-bundles/nifi-kafka-bundle/nifi-kafka-0-9-processors/src/test/java/org/apache/nifi/processors/kafka/pubsub/ConsumeKafkaTest.java:[617,88] error: cannot find symbol
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/nifi/nifi-nar-bundles/nifi-kafka-bundle/nifi-kafka-0-9-processors/src/test/java/org/apache/nifi/processors/kafka/pubsub/PublishKafkaTest.java:[361,39] error: cannot find symbol
+[ERROR]   symbol:   variable KEY_ATTRIBUTE_ENCODING
+  location: class PublishKafka
+/home/carol/Downloads/Workspaces/bugs-dot-jar/nifi/nifi-nar-bundles/nifi-kafka-bundle/nifi-kafka-0-9-processors/src/test/java/org/apache/nifi/processors/kafka/pubsub/PublishKafkaTest.java:[361,76] error: cannot find symbol
+[INFO] 10 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.450 s
+[INFO] Finished at: 2025-07-16T20:48:37+01:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.2:testCompile (default-testCompile) on project nifi-kafka-0-9-processors: Compilation failure: Compilation failure: 
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/nifi/nifi-nar-bundles/nifi-kafka-bundle/nifi-kafka-0-9-processors/src/test/java/org/apache/nifi/processors/kafka/pubsub/ConsumeKafkaTest.java:[556,88] error: cannot find symbol
+[ERROR]   symbol:   variable KAFKA_KEY
+[ERROR]   location: class KafkaProcessorUtils
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/nifi/nifi-nar-bundles/nifi-kafka-bundle/nifi-kafka-0-9-processors/src/test/java/org/apache/nifi/processors/kafka/pubsub/ConsumeKafkaTest.java:[557,88] error: cannot find symbol
+[ERROR]   symbol:   variable KAFKA_KEY
+[ERROR]   location: class KafkaProcessorUtils
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/nifi/nifi-nar-bundles/nifi-kafka-bundle/nifi-kafka-0-9-processors/src/test/java/org/apache/nifi/processors/kafka/pubsub/ConsumeKafkaTest.java:[558,88] error: cannot find symbol
+[ERROR]   symbol:   variable KAFKA_KEY
+[ERROR]   location: class KafkaProcessorUtils
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/nifi/nifi-nar-bundles/nifi-kafka-bundle/nifi-kafka-0-9-processors/src/test/java/org/apache/nifi/processors/kafka/pubsub/ConsumeKafkaTest.java:[601,39] error: cannot find symbol
+[ERROR]   symbol:   variable KEY_ATTRIBUTE_ENCODING
+[ERROR]   location: class ConsumeKafka
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/nifi/nifi-nar-bundles/nifi-kafka-bundle/nifi-kafka-0-9-processors/src/test/java/org/apache/nifi/processors/kafka/pubsub/ConsumeKafkaTest.java:[601,76] error: cannot find symbol
+[ERROR]   symbol:   variable HEX_ENCODING
+[ERROR]   location: class ConsumeKafka
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/nifi/nifi-nar-bundles/nifi-kafka-bundle/nifi-kafka-0-9-processors/src/test/java/org/apache/nifi/processors/kafka/pubsub/ConsumeKafkaTest.java:[615,88] error: cannot find symbol
+[ERROR]   symbol:   variable KAFKA_KEY
+[ERROR]   location: class KafkaProcessorUtils
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/nifi/nifi-nar-bundles/nifi-kafka-bundle/nifi-kafka-0-9-processors/src/test/java/org/apache/nifi/processors/kafka/pubsub/ConsumeKafkaTest.java:[616,88] error: cannot find symbol
+[ERROR]   symbol:   variable KAFKA_KEY
+[ERROR]   location: class KafkaProcessorUtils
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/nifi/nifi-nar-bundles/nifi-kafka-bundle/nifi-kafka-0-9-processors/src/test/java/org/apache/nifi/processors/kafka/pubsub/ConsumeKafkaTest.java:[617,88] error: cannot find symbol
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/nifi/nifi-nar-bundles/nifi-kafka-bundle/nifi-kafka-0-9-processors/src/test/java/org/apache/nifi/processors/kafka/pubsub/PublishKafkaTest.java:[361,39] error: cannot find symbol
+[ERROR]   symbol:   variable KEY_ATTRIBUTE_ENCODING
+[ERROR]   location: class PublishKafka
+[ERROR] /home/carol/Downloads/Workspaces/bugs-dot-jar/nifi/nifi-nar-bundles/nifi-kafka-bundle/nifi-kafka-0-9-processors/src/test/java/org/apache/nifi/processors/kafka/pubsub/PublishKafkaTest.java:[361,76] error: cannot find symbol
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

@@ -1,0 +1,225 @@
+rss:
+  '@version': '0.92'
+  channel:
+    build-info:
+      build-date: 22-06-2022
+      build-number: '820010'
+      version: 8.20.10
+    description: This file is an XML representation of an issue
+    item:
+      assignee:
+        '#text': Mark Payne
+        '@username': markap14
+      attachments: null
+      comments:
+        comment:
+        - '#text': <p>agreed - my bad.</p>
+          '@author': joewitt
+          '@created': Thu, 25 Aug 2016 20:18:25 +0000
+          '@id': '15437583'
+        - '#text': '<p>GitHub user markap14 opened a pull request:</p>
+
+
+            <p>    <a href="https://github.com/apache/nifi/pull/954" class="external-link"
+            target="_blank" rel="nofollow noopener">https://github.com/apache/nifi/pull/954</a></p>
+
+
+            <p>    <a href="https://issues.apache.org/jira/browse/NIFI-2670" title="ConsumeKafka
+            should support a configurable option for how to encode kafka key as attribute"
+            class="issue-link" data-issue-key="NIFI-2670"><del>NIFI-2670</del></a>:
+            Expose option for how to interpret Kafka Key - hexadeimal encoding or
+            UTF-8 String</p>
+
+
+
+
+            <p>You can merge this pull request into a Git repository by running:</p>
+
+
+            <p>    $ git pull <a href="https://github.com/markap14/nifi" class="external-link"
+            target="_blank" rel="nofollow noopener">https://github.com/markap14/nifi</a>
+            <a href="https://issues.apache.org/jira/browse/NIFI-2670" title="ConsumeKafka
+            should support a configurable option for how to encode kafka key as attribute"
+            class="issue-link" data-issue-key="NIFI-2670"><del>NIFI-2670</del></a></p>
+
+
+            <p>Alternatively you can review and apply these changes as the patch at:</p>
+
+
+            <p>    <a href="https://github.com/apache/nifi/pull/954.patch" class="external-link"
+            target="_blank" rel="nofollow noopener">https://github.com/apache/nifi/pull/954.patch</a></p>
+
+
+            <p>To close this pull request, make a commit to your master/trunk branch<br/>
+
+            with (at least) the following in the commit message:</p>
+
+
+            <p>    This closes #954</p>
+
+
+            <hr />
+
+            <p>commit 50842cb24e185e931b81880c3c33afcc22819736<br/>
+
+            Author: Mark Payne &lt;markap14@hotmail.com&gt;<br/>
+
+            Date:   2016-08-26T01:00:45Z</p>
+
+
+            <p>    <a href="https://issues.apache.org/jira/browse/NIFI-2670" title="ConsumeKafka
+            should support a configurable option for how to encode kafka key as attribute"
+            class="issue-link" data-issue-key="NIFI-2670"><del>NIFI-2670</del></a>:
+            Expose option for how to interpret Kafka Key - hexadeimal encoding or
+            UTF-8 String</p>
+
+
+            <hr />'
+          '@author': githubbot
+          '@created': Fri, 26 Aug 2016 01:01:29 +0000
+          '@id': '15438230'
+        - '#text': '<p>Commit 58e0ce7f92f708422276a68f4e04c61470c71b11 in nifi''s
+            branch refs/heads/master from <a href="https://issues.apache.org/jira/secure/ViewProfile.jspa?name=markap14"
+            class="user-hover" rel="markap14">markap14</a><br/>
+
+            [ <a href="https://git-wip-us.apache.org/repos/asf?p=nifi.git;h=58e0ce7"
+            class="external-link" target="_blank" rel="nofollow noopener">https://git-wip-us.apache.org/repos/asf?p=nifi.git;h=58e0ce7</a>
+            ]</p>
+
+
+            <p><a href="https://issues.apache.org/jira/browse/NIFI-2670" title="ConsumeKafka
+            should support a configurable option for how to encode kafka key as attribute"
+            class="issue-link" data-issue-key="NIFI-2670"><del>NIFI-2670</del></a>:
+            This closes #954. Expose option for how to interpret Kafka Key - hexadeimal
+            encoding or UTF-8 String</p>'
+          '@author': jira-bot
+          '@created': Fri, 26 Aug 2016 02:18:12 +0000
+          '@id': '15438321'
+        - '#text': '<p>Commit 405252244ec7539abb02ff43d25ff17682fd2fa7 in nifi''s
+            branch refs/heads/master from <a href="https://issues.apache.org/jira/secure/ViewProfile.jspa?name=joewitt"
+            class="user-hover" rel="joewitt">joewitt</a><br/>
+
+            [ <a href="https://git-wip-us.apache.org/repos/asf?p=nifi.git;h=4052522"
+            class="external-link" target="_blank" rel="nofollow noopener">https://git-wip-us.apache.org/repos/asf?p=nifi.git;h=4052522</a>
+            ]</p>
+
+
+            <p><a href="https://issues.apache.org/jira/browse/NIFI-2670" title="ConsumeKafka
+            should support a configurable option for how to encode kafka key as attribute"
+            class="issue-link" data-issue-key="NIFI-2670"><del>NIFI-2670</del></a>
+            minor doc edit to remove kafka.key.hex reference</p>'
+          '@author': jira-bot
+          '@created': Fri, 26 Aug 2016 02:18:15 +0000
+          '@id': '15438322'
+        - '#text': '<p>Github user asfgit closed the pull request at:</p>
+
+
+            <p>    <a href="https://github.com/apache/nifi/pull/954" class="external-link"
+            target="_blank" rel="nofollow noopener">https://github.com/apache/nifi/pull/954</a></p>'
+          '@author': githubbot
+          '@created': Fri, 26 Aug 2016 02:18:24 +0000
+          '@id': '15438323'
+        - '#text': '<p>full clean build w/contrib check passes.<br/>
+
+            code looks good<br/>
+
+            updated a small overlook on docs in 0.10 (was fine in 0.9)<br/>
+
+            tested a flow with 09 and 010 in parallel doing all kinds of hex/utf-8
+            combos/in out/ all works good.</p>
+
+
+            <p>+1 merged to master.</p>'
+          '@author': joewitt
+          '@created': Fri, 26 Aug 2016 02:19:04 +0000
+          '@id': '15438325'
+      component: Extensions
+      created: Thu, 25 Aug 2016 19:48:20 +0000
+      customfields:
+        customfield:
+        - '@id': customfield_12310310
+          '@key': com.atlassian.jira.toolkit:attachments
+          customfieldname: Attachment count
+          customfieldvalues:
+            customfieldvalue: '0.0'
+        - '@id': customfield_12314020
+          '@key': com.atlassian.jira.plugins.jira-development-integration-plugin:devsummary
+          customfieldname: Development
+          customfieldvalues: null
+        - '@id': customfield_12313422
+          '@key': com.atlassian.jirafisheyeplugin:jobcheckbox
+          customfieldname: Enable Automatic Patch Review
+          customfieldvalues:
+            customfieldvalue: 'false'
+        - '@id': customfield_12310420
+          '@key': com.pyxis.greenhopper.jira:gh-global-rank
+          customfieldname: Global Rank
+          customfieldvalues:
+            customfieldvalue: '9223372036854775807'
+        - '@id': customfield_12312521
+          '@key': com.atlassian.jira.toolkit:LastCommentDate
+          customfieldname: Last public comment date
+          customfieldvalues: 8 years, 47 weeks, 5 days ago
+        - '@id': customfield_12311820
+          '@key': com.pyxis.greenhopper.jira:gh-lexo-rank
+          customfieldname: Rank
+          customfieldvalues:
+            customfieldvalue: '0|i32t5j:'
+        - '@id': customfield_12310920
+          '@key': com.pyxis.greenhopper.jira:gh-global-rank
+          customfieldname: Rank (Obsolete)
+          customfieldvalues:
+            customfieldvalue: '9223372036854775807'
+      description: <p>Previously, ConsumeKafka / GetKafka added the kafka key as an
+        attribute to the flowfile, assuming that the key was in UTF-8 format. Recently,
+        this was changed to use a hex encoding. This could break flows, as it is not
+        backward compatible. We should instead make this a configurable option with
+        the default being UTF-8 Encoded.</p>
+      due: null
+      environment: null
+      fixVersion: 1.0.0
+      key:
+        '#text': NIFI-2670
+        '@id': '13000155'
+      labels: null
+      link: https://issues.apache.org/jira/browse/NIFI-2670
+      priority:
+        '#text': Critical
+        '@iconUrl': https://issues.apache.org/jira/images/icons/priorities/critical.svg
+        '@id': '2'
+      project:
+        '#text': Apache NiFi
+        '@id': '12316020'
+        '@key': NIFI
+      reporter:
+        '#text': Mark Payne
+        '@username': markap14
+      resolution:
+        '#text': Fixed
+        '@id': '1'
+      resolved: Fri, 26 Aug 2016 02:19:22 +0000
+      status:
+        '#text': Resolved
+        '@description': A resolution has been taken, and it is awaiting verification
+          by reporter. From here issues are either reopened, or are closed.
+        '@iconUrl': https://issues.apache.org/jira/images/icons/statuses/resolved.png
+        '@id': '5'
+      statusCategory:
+        '@colorName': green
+        '@id': '3'
+        '@key': done
+      subtasks: null
+      summary: ConsumeKafka should support a configurable option for how to encode
+        kafka key as attribute
+      title: '[NIFI-2670] ConsumeKafka should support a configurable option for how
+        to encode kafka key as attribute'
+      type:
+        '#text': Bug
+        '@iconUrl': https://issues.apache.org/jira/secure/viewavatar?size=xsmall&avatarId=21133&avatarType=issuetype
+        '@id': '1'
+      updated: Fri, 26 Aug 2016 02:19:23 +0000
+      votes: '0'
+      watches: '4'
+    language: en-uk
+    link: https://issues.apache.org/jira
+    title: ASF JIRA
