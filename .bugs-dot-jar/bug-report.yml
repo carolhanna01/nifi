@@ -1,0 +1,179 @@
+rss:
+  '@version': '0.92'
+  channel:
+    build-info:
+      build-date: 22-06-2022
+      build-number: '820010'
+      version: 8.20.10
+    description: This file is an XML representation of an issue
+    item:
+      assignee:
+        '#text': Matt Gilman
+        '@username': mcgilman
+      attachments: null
+      comments:
+        comment:
+        - '#text': "<p>GitHub user mcgilman opened a pull request:</p>\n\n<p>    <a\
+            \ href=\"https://github.com/apache/nifi/pull/1752\" class=\"external-link\"\
+            \ target=\"_blank\" rel=\"nofollow noopener\">https://github.com/apache/nifi/pull/1752</a></p>\n\
+            \n<p>    <a href=\"https://issues.apache.org/jira/browse/NIFI-3800\" title=\"\
+            Cluster - Clean up headers in replicated requests\" class=\"issue-link\"\
+            \ data-issue-key=\"NIFI-3800\"><del>NIFI-3800</del></a>: Cleaning up the\
+            \ headers when replicating requests</p>\n\n<p>    <a href=\"https://issues.apache.org/jira/browse/NIFI-3800\"\
+            \ title=\"Cluster - Clean up headers in replicated requests\" class=\"\
+            issue-link\" data-issue-key=\"NIFI-3800\"><del>NIFI-3800</del></a>:</p>\n\
+            <ul class=\"alternate\" type=\"square\">\n\t<li>Cleaning up the headers\
+            \ when replicating requests.</li>\n</ul>\n\n\n<p>    There is still some\
+            \ testing efforts ongoing but I wanted to get the PR up for review purposes\
+            \ ASAP.</p>\n\n<p>You can merge this pull request into a Git repository\
+            \ by running:</p>\n\n<p>    $ git pull <a href=\"https://github.com/mcgilman/nifi\"\
+            \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\"\
+            >https://github.com/mcgilman/nifi</a> replicated-headers</p>\n\n<p>Alternatively\
+            \ you can review and apply these changes as the patch at:</p>\n\n<p> \
+            \   <a href=\"https://github.com/apache/nifi/pull/1752.patch\" class=\"\
+            external-link\" target=\"_blank\" rel=\"nofollow noopener\">https://github.com/apache/nifi/pull/1752.patch</a></p>\n\
+            \n<p>To close this pull request, make a commit to your master/trunk branch<br/>\n\
+            with (at least) the following in the commit message:</p>\n\n<p>    This\
+            \ closes #1752</p>\n\n<hr />\n<p>commit 066be5af1c2f32692ba7d5a13632d907f44bb37d<br/>\n\
+            Author: Matt Gilman &lt;matt.c.gilman@gmail.com&gt;<br/>\nDate:   2017-05-04T13:55:20Z</p>\n\
+            \n<p>    <a href=\"https://issues.apache.org/jira/browse/NIFI-3800\" title=\"\
+            Cluster - Clean up headers in replicated requests\" class=\"issue-link\"\
+            \ data-issue-key=\"NIFI-3800\"><del>NIFI-3800</del></a>:</p>\n<ul class=\"\
+            alternate\" type=\"square\">\n\t<li>Cleaning up the headers when replicating\
+            \ requests.</li>\n</ul>\n\n\n<hr />"
+          '@author': githubbot
+          '@created': Thu, 4 May 2017 15:23:57 +0000
+          '@id': '15996918'
+        - '#text': '<p>Github user alopresto commented on the issue:</p>
+
+
+            <p>    <a href="https://github.com/apache/nifi/pull/1752" class="external-link"
+            target="_blank" rel="nofollow noopener">https://github.com/apache/nifi/pull/1752</a></p>
+
+
+            <p>    Reviewing...</p>'
+          '@author': githubbot
+          '@created': Thu, 4 May 2017 15:52:49 +0000
+          '@id': '15996962'
+        - '#text': '<p>Github user alopresto commented on the issue:</p>
+
+
+            <p>    <a href="https://github.com/apache/nifi/pull/1752" class="external-link"
+            target="_blank" rel="nofollow noopener">https://github.com/apache/nifi/pull/1752</a></p>
+
+
+            <p>    Changes look good to me (especially like cleaning up the token).
+            We''ve tested this against the latest OpenJDK and Oracle JDK and both
+            work. +1 and I will merge. </p>'
+          '@author': githubbot
+          '@created': Thu, 4 May 2017 15:53:56 +0000
+          '@id': '15996964'
+        - '#text': "<p>Commit f3745065b058d2ed6fa17336ae73a8329c250f9a in nifi's branch\
+            \ refs/heads/master from <a href=\"https://issues.apache.org/jira/secure/ViewProfile.jspa?name=mcgilman\"\
+            \ class=\"user-hover\" rel=\"mcgilman\">mcgilman</a><br/>\n[ <a href=\"\
+            https://git-wip-us.apache.org/repos/asf?p=nifi.git;h=f374506\" class=\"\
+            external-link\" target=\"_blank\" rel=\"nofollow noopener\">https://git-wip-us.apache.org/repos/asf?p=nifi.git;h=f374506</a>\
+            \ ]</p>\n\n<p><a href=\"https://issues.apache.org/jira/browse/NIFI-3800\"\
+            \ title=\"Cluster - Clean up headers in replicated requests\" class=\"\
+            issue-link\" data-issue-key=\"NIFI-3800\"><del>NIFI-3800</del></a>:</p>\n\
+            <ul class=\"alternate\" type=\"square\">\n\t<li>Cleaning up the headers\
+            \ when replicating requests.</li>\n</ul>\n\n\n<p>This closes #1752.</p>\n\
+            \n<p>Signed-off-by: Andy LoPresto &lt;alopresto@apache.org&gt;</p>"
+          '@author': jira-bot
+          '@created': Thu, 4 May 2017 16:06:18 +0000
+          '@id': '15996984'
+        - '#text': '<p>Github user asfgit closed the pull request at:</p>
+
+
+            <p>    <a href="https://github.com/apache/nifi/pull/1752" class="external-link"
+            target="_blank" rel="nofollow noopener">https://github.com/apache/nifi/pull/1752</a></p>'
+          '@author': githubbot
+          '@created': Thu, 4 May 2017 16:06:37 +0000
+          '@id': '15996985'
+      component: Core Framework
+      created: Thu, 4 May 2017 14:04:20 +0000
+      customfields:
+        customfield:
+        - '@id': customfield_12310310
+          '@key': com.atlassian.jira.toolkit:attachments
+          customfieldname: Attachment count
+          customfieldvalues:
+            customfieldvalue: '0.0'
+        - '@id': customfield_12314020
+          '@key': com.atlassian.jira.plugins.jira-development-integration-plugin:devsummary
+          customfieldname: Development
+          customfieldvalues: null
+        - '@id': customfield_12313422
+          '@key': com.atlassian.jirafisheyeplugin:jobcheckbox
+          customfieldname: Enable Automatic Patch Review
+          customfieldvalues:
+            customfieldvalue: 'false'
+        - '@id': customfield_12310420
+          '@key': com.pyxis.greenhopper.jira:gh-global-rank
+          customfieldname: Global Rank
+          customfieldvalues:
+            customfieldvalue: '9223372036854775807'
+        - '@id': customfield_12312521
+          '@key': com.atlassian.jira.toolkit:LastCommentDate
+          customfieldname: Last public comment date
+          customfieldvalues: 8 years, 11 weeks, 6 days ago
+        - '@id': customfield_12311820
+          '@key': com.pyxis.greenhopper.jira:gh-lexo-rank
+          customfieldname: Rank
+          customfieldvalues:
+            customfieldvalue: '0|i3ehof:'
+        - '@id': customfield_12310920
+          '@key': com.pyxis.greenhopper.jira:gh-global-rank
+          customfieldname: Rank (Obsolete)
+          customfieldvalues:
+            customfieldvalue: '9223372036854775807'
+      description: <p>When replicating requests, the cluster coordinator should ensure
+        the headers are configured accordingly. The headers in question ensure that
+        response entities contain the appropriate URIs and the appropriate Host is
+        considered for SNI checks.</p>
+      due: null
+      environment: null
+      fixVersion: 1.2.0
+      key:
+        '#text': NIFI-3800
+        '@id': '13069151'
+      labels: null
+      link: https://issues.apache.org/jira/browse/NIFI-3800
+      priority:
+        '#text': Major
+        '@iconUrl': https://issues.apache.org/jira/images/icons/priorities/major.svg
+        '@id': '3'
+      project:
+        '#text': Apache NiFi
+        '@id': '12316020'
+        '@key': NIFI
+      reporter:
+        '#text': Matt Gilman
+        '@username': mcgilman
+      resolution:
+        '#text': Fixed
+        '@id': '1'
+      resolved: Thu, 4 May 2017 16:06:57 +0000
+      status:
+        '#text': Resolved
+        '@description': A resolution has been taken, and it is awaiting verification
+          by reporter. From here issues are either reopened, or are closed.
+        '@iconUrl': https://issues.apache.org/jira/images/icons/statuses/resolved.png
+        '@id': '5'
+      statusCategory:
+        '@colorName': green
+        '@id': '3'
+        '@key': done
+      subtasks: null
+      summary: Cluster - Clean up headers in replicated requests
+      title: '[NIFI-3800] Cluster - Clean up headers in replicated requests'
+      type:
+        '#text': Bug
+        '@iconUrl': https://issues.apache.org/jira/secure/viewavatar?size=xsmall&avatarId=21133&avatarType=issuetype
+        '@id': '1'
+      updated: Thu, 4 May 2017 16:06:57 +0000
+      votes: '0'
+      watches: '3'
+    language: en-uk
+    link: https://issues.apache.org/jira
+    title: ASF JIRA
