@@ -1,0 +1,130 @@
+[INFO] Scanning for projects...
+[INFO] Inspecting build with total of 1 modules...
+[INFO] Installing Nexus Staging features:
+[INFO]   ... total of 1 executions of maven-deploy-plugin replaced with nexus-staging-maven-plugin
+[INFO] 
+[INFO] ---------< org.apache.nifi:nifi-record-serialization-services >---------
+[INFO] Building nifi-record-serialization-services 1.12.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.0.0-M3:enforce (enforce-maven-version) @ nifi-record-serialization-services ---
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.0.0-M3:enforce (enforce-maven) @ nifi-record-serialization-services ---
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.0.0-M3:enforce (enforce-no-snapshots) @ nifi-record-serialization-services ---
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.0.0-M3:enforce (enforce-banned-dependencies) @ nifi-record-serialization-services ---
+[INFO] 
+[INFO] --- buildnumber-maven-plugin:1.4:create (default) @ nifi-record-serialization-services ---
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:1.7.0:process (process-resource-bundles) @ nifi-record-serialization-services ---
+[INFO] Preparing remote bundle org.apache:apache-jar-resource-bundle:1.4
+[INFO] Copying 3 resources from 1 bundle.
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ nifi-record-serialization-services ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 10 resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ nifi-record-serialization-services ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ nifi-record-serialization-services ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 65 resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ nifi-record-serialization-services ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (groovy-tests) @ nifi-record-serialization-services ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ nifi-record-serialization-services ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.apache.nifi.avro.TestAvroReaderWithExplicitSchema
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.18 s - in org.apache.nifi.avro.TestAvroReaderWithExplicitSchema
+[INFO] Running org.apache.nifi.avro.TestWriteAvroResultWithSchema
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.124 s - in org.apache.nifi.avro.TestWriteAvroResultWithSchema
+[INFO] Running org.apache.nifi.avro.TestWriteAvroResultWithoutSchema
+[WARNING] Tests run: 7, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.026 s - in org.apache.nifi.avro.TestWriteAvroResultWithoutSchema
+[INFO] Running org.apache.nifi.avro.TestAvroReaderWithEmbeddedSchema
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 s - in org.apache.nifi.avro.TestAvroReaderWithEmbeddedSchema
+[INFO] Running org.apache.nifi.text.TestFreeFormTextRecordSetWriter
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.107 s - in org.apache.nifi.text.TestFreeFormTextRecordSetWriter
+[INFO] Running org.apache.nifi.syslog.TestSyslogRecordReader
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s - in org.apache.nifi.syslog.TestSyslogRecordReader
+[INFO] Running org.apache.nifi.syslog.TestSyslog5424RecordReader
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.088 s - in org.apache.nifi.syslog.TestSyslog5424RecordReader
+[INFO] Running org.apache.nifi.schema.inference.TestVolatileSchemaCache
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s - in org.apache.nifi.schema.inference.TestVolatileSchemaCache
+[INFO] Running org.apache.nifi.schema.inference.TestFieldTypeInference
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.035 s - in org.apache.nifi.schema.inference.TestFieldTypeInference
+[INFO] Running org.apache.nifi.xml.TestInferXmlSchema
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.413 s - in org.apache.nifi.xml.TestInferXmlSchema
+[INFO] Running org.apache.nifi.xml.TestXMLRecordSetWriter
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.117 s - in org.apache.nifi.xml.TestXMLRecordSetWriter
+[INFO] Running org.apache.nifi.xml.TestXMLReader
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.03 s - in org.apache.nifi.xml.TestXMLReader
+[INFO] Running org.apache.nifi.xml.TestWriteXMLResult
+[INFO] Tests run: 59, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.259 s - in org.apache.nifi.xml.TestWriteXMLResult
+[INFO] Running org.apache.nifi.xml.TestXMLRecordReader
+[INFO] Tests run: 49, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.047 s - in org.apache.nifi.xml.TestXMLRecordReader
+[INFO] Running org.apache.nifi.csv.TestCSVHeaderSchemaStrategy
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s - in org.apache.nifi.csv.TestCSVHeaderSchemaStrategy
+[INFO] Running org.apache.nifi.csv.TestCSVValidators
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.034 s - in org.apache.nifi.csv.TestCSVValidators
+[INFO] Running org.apache.nifi.csv.TestWriteCSVResult
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.016 s - in org.apache.nifi.csv.TestWriteCSVResult
+[INFO] Running org.apache.nifi.csv.TestJacksonCSVRecordReader
+[ERROR] Tests run: 12, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.111 s <<< FAILURE! - in org.apache.nifi.csv.TestJacksonCSVRecordReader
+[ERROR] testNullRecordSeparator(org.apache.nifi.csv.TestJacksonCSVRecordReader)  Time elapsed: 0.004 s  <<< ERROR!
+java.lang.NullPointerException
+	at org.apache.nifi.csv.TestJacksonCSVRecordReader.createReader(TestJacksonCSVRecordReader.java:64)
+	at org.apache.nifi.csv.TestJacksonCSVRecordReader.testNullRecordSeparator(TestJacksonCSVRecordReader.java:404)
+
+[INFO] Running org.apache.nifi.csv.TestCSVRecordReader
+[INFO] Tests run: 23, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 s - in org.apache.nifi.csv.TestCSVRecordReader
+[INFO] Running org.apache.nifi.csv.TestCSVSchemaInference
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s - in org.apache.nifi.csv.TestCSVSchemaInference
+[INFO] Running org.apache.nifi.grok.TestGrokRecordReader
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.035 s - in org.apache.nifi.grok.TestGrokRecordReader
+[INFO] Running org.apache.nifi.json.TestJsonTreeRowRecordReader
+[WARNING] Tests run: 20, Failures: 0, Errors: 0, Skipped: 2, Time elapsed: 0.03 s - in org.apache.nifi.json.TestJsonTreeRowRecordReader
+[INFO] Running org.apache.nifi.json.TestJsonSchemaInference
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in org.apache.nifi.json.TestJsonSchemaInference
+[INFO] Running org.apache.nifi.json.TestInferJsonSchemaAccessStrategy
+[WARNING] Tests run: 5, Failures: 0, Errors: 0, Skipped: 2, Time elapsed: 0.008 s - in org.apache.nifi.json.TestInferJsonSchemaAccessStrategy
+[INFO] Running org.apache.nifi.json.TestWriteJsonResult
+[INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 s - in org.apache.nifi.json.TestWriteJsonResult
+[INFO] Running org.apache.nifi.json.TestJsonPathRowRecordReader
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.037 s - in org.apache.nifi.json.TestJsonPathRowRecordReader
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Errors: 
+[ERROR]   TestJacksonCSVRecordReader.testNullRecordSeparator:404->createReader:64 » NullPointer
+[INFO] 
+[ERROR] Tests run: 275, Failures: 0, Errors: 1, Skipped: 5
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  4.822 s
+[INFO] Finished at: 2025-07-16T11:00:31+01:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project nifi-record-serialization-services: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/carol/Downloads/Workspaces/bugs-dot-jar/nifi/nifi-nar-bundles/nifi-standard-services/nifi-record-serialization-services-bundle/nifi-record-serialization-services/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

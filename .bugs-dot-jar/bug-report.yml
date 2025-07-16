@@ -1,0 +1,159 @@
+rss:
+  '@version': '0.92'
+  channel:
+    build-info:
+      build-date: 22-06-2022
+      build-number: '820010'
+      version: 8.20.10
+    description: This file is an XML representation of an issue
+    item:
+      aggregateprogress:
+        '@percentage': '100'
+        currentProgress:
+          row:
+          - '@backgroundColor': '#51a825'
+            '@percentage': '100'
+          - '@backgroundColor': '#ec8e00'
+            '@percentage': '0'
+        originalProgress:
+          row:
+          - '@backgroundColor': '#89afd7'
+            '@percentage': '0'
+          - '@backgroundColor': transparent
+            '@percentage': '100'
+      assignee:
+        '#text': Matt Burgess
+        '@username': mattyb149
+      attachments: null
+      comments:
+        comment:
+          '#text': '<p>Commit b7b2533ffe556ef5bb1982e819f465ce1c74881b in nifi''s
+            branch refs/heads/main from Matt Burgess<br/>
+
+            [ <a href="https://gitbox.apache.org/repos/asf?p=nifi.git;h=b7b2533" class="external-link"
+            target="_blank" rel="nofollow noopener">https://gitbox.apache.org/repos/asf?p=nifi.git;h=b7b2533</a>
+            ]</p>
+
+
+            <p><a href="https://issues.apache.org/jira/browse/NIFI-7734" title="Add
+            Record Separator property to CSVReader, causes Jackson parser to fail
+            with Custom format" class="issue-link" data-issue-key="NIFI-7734"><del>NIFI-7734</del></a>:
+            Added Record Separator property to CSVReader</p>'
+          '@author': jira-bot
+          '@created': Thu, 13 Aug 2020 02:05:25 +0000
+          '@id': '17176713'
+      component: Extensions
+      created: Wed, 12 Aug 2020 20:57:47 +0000
+      customfields:
+        customfield:
+        - '@id': customfield_12310310
+          '@key': com.atlassian.jira.toolkit:attachments
+          customfieldname: Attachment count
+          customfieldvalues:
+            customfieldvalue: '0.0'
+        - '@id': customfield_12314020
+          '@key': com.atlassian.jira.plugins.jira-development-integration-plugin:devsummary
+          customfieldname: Development
+          customfieldvalues: null
+        - '@id': customfield_12313422
+          '@key': com.atlassian.jirafisheyeplugin:jobcheckbox
+          customfieldname: Enable Automatic Patch Review
+          customfieldvalues:
+            customfieldvalue: 'false'
+        - '@id': customfield_12310420
+          '@key': com.pyxis.greenhopper.jira:gh-global-rank
+          customfieldname: Global Rank
+          customfieldvalues:
+            customfieldvalue: '9223372036854775807'
+        - '@id': customfield_12312521
+          '@key': com.atlassian.jira.toolkit:LastCommentDate
+          customfieldname: Last public comment date
+          customfieldvalues: 4 years, 48 weeks, 6 days ago
+        - '@id': customfield_12311820
+          '@key': com.pyxis.greenhopper.jira:gh-lexo-rank
+          customfieldname: Rank
+          customfieldvalues:
+            customfieldvalue: '0|z0hpow:'
+        - '@id': customfield_12310920
+          '@key': com.pyxis.greenhopper.jira:gh-global-rank
+          customfieldname: Rank (Obsolete)
+          customfieldvalues:
+            customfieldvalue: '9223372036854775807'
+      description: '<p>If "Custom" is set as the format in CSVReader when "Jackson
+        CSV" is set for the CSV Parser property, a NullPointerException occurs.</p>
+
+
+        <p>This is because there is no Record Separator property available for CSVReader,
+        so the value is null when retrieved to configure the Jackson CSV parser. The
+        Jackson CSV Parser code in NiFi should be updated to check for null and default
+        to the newline character sequence, and the Record Separator property should
+        be exposed in the CSVReader in order to ensure it is set (and can be configured
+        by the user), as was done for the ConvertExcelToCSVProcessor.</p>'
+      due: null
+      environment: null
+      fixVersion: 1.12.0
+      key:
+        '#text': NIFI-7734
+        '@id': '13322367'
+      labels: null
+      link: https://issues.apache.org/jira/browse/NIFI-7734
+      priority:
+        '#text': Major
+        '@iconUrl': https://issues.apache.org/jira/images/icons/priorities/major.svg
+        '@id': '3'
+      progress:
+        '@percentage': '100'
+        currentProgress:
+          row:
+          - '@backgroundColor': '#51a825'
+            '@percentage': '100'
+          - '@backgroundColor': '#ec8e00'
+            '@percentage': '0'
+        originalProgress:
+          row:
+          - '@backgroundColor': '#89afd7'
+            '@percentage': '0'
+          - '@backgroundColor': transparent
+            '@percentage': '100'
+      project:
+        '#text': Apache NiFi
+        '@id': '12316020'
+        '@key': NIFI
+      reporter:
+        '#text': Matt Burgess
+        '@username': mattyb149
+      resolution:
+        '#text': Fixed
+        '@id': '1'
+      resolved: Thu, 13 Aug 2020 02:08:39 +0000
+      status:
+        '#text': Resolved
+        '@description': A resolution has been taken, and it is awaiting verification
+          by reporter. From here issues are either reopened, or are closed.
+        '@iconUrl': https://issues.apache.org/jira/images/icons/statuses/resolved.png
+        '@id': '5'
+      statusCategory:
+        '@colorName': green
+        '@id': '3'
+        '@key': done
+      subtasks: null
+      summary: Add Record Separator property to CSVReader, causes Jackson parser to
+        fail with Custom format
+      timeestimate:
+        '#text': 0h
+        '@seconds': '0'
+      timespent:
+        '#text': 0.5h
+        '@seconds': '1800'
+      title: '[NIFI-7734] Add Record Separator property to CSVReader, causes Jackson
+        parser to fail with Custom format'
+      type:
+        '#text': Bug
+        '@iconUrl': https://issues.apache.org/jira/secure/viewavatar?size=xsmall&avatarId=21133&avatarType=issuetype
+        '@id': '1'
+      updated: Thu, 13 Aug 2020 03:08:55 +0000
+      votes: '0'
+      watches: '2'
+    language: en-uk
+    link: https://issues.apache.org/jira
+    title: ASF JIRA
