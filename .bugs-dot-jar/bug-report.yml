@@ -1,0 +1,273 @@
+rss:
+  '@version': '0.92'
+  channel:
+    build-info:
+      build-date: 22-06-2022
+      build-number: '820010'
+      version: 8.20.10
+    description: This file is an XML representation of an issue
+    item:
+      aggregateprogress:
+        '@percentage': '100'
+        currentProgress:
+          row:
+          - '@backgroundColor': '#51a825'
+            '@percentage': '100'
+          - '@backgroundColor': '#ec8e00'
+            '@percentage': '0'
+        originalProgress:
+          row:
+          - '@backgroundColor': '#89afd7'
+            '@percentage': '0'
+          - '@backgroundColor': transparent
+            '@percentage': '100'
+      assignee:
+        '#text': Kevin Doran
+        '@username': kdoran
+      attachments: null
+      comments:
+        comment:
+        - '#text': '<p>Commit 2938454ae4fc200fd5f6aeffe23bc4b33c83e783 in nifi''s
+            branch refs/heads/master from Kevin Doran<br/>
+
+            [ <a href="https://gitbox.apache.org/repos/asf?p=nifi.git;h=2938454" class="external-link"
+            target="_blank" rel="nofollow noopener">https://gitbox.apache.org/repos/asf?p=nifi.git;h=2938454</a>
+            ]</p>
+
+
+            <p><a href="https://issues.apache.org/jira/browse/NIFI-6020" title="Cannot
+            list users or policies when an access policy contains a group that is
+            deleted" class="issue-link" data-issue-key="NIFI-6020"><del>NIFI-6020</del></a>:
+            Fix NPE in getAccessPoliciesForUser</p>
+
+
+            <p>This closes #3304</p>'
+          '@author': jira-bot
+          '@created': Wed, 13 Feb 2019 21:04:06 +0000
+          '@id': '16767592'
+        - '#text': "<p><a href=\"https://issues.apache.org/jira/secure/ViewProfile.jspa?name=mcgilman\"\
+            \ class=\"user-hover\" rel=\"mcgilman\">mcgilman</a>: User page are now\
+            \ working i 1.9.0, but there are still problems showing policies if a\
+            \ ldap group has been deleted.<br/>\nThe policy is still working but the\
+            \ policy page says: No policy for the specified resource.\_Create\_a new\
+            \ policy.</p>"
+          '@author': jmkofoed
+          '@created': Sat, 2 Mar 2019 12:18:22 +0000
+          '@id': '16782350'
+      component: Core UI
+      created: Wed, 13 Feb 2019 15:48:14 +0000
+      customfields:
+        customfield:
+        - '@id': customfield_12310310
+          '@key': com.atlassian.jira.toolkit:attachments
+          customfieldname: Attachment count
+          customfieldvalues:
+            customfieldvalue: '0.0'
+        - '@id': customfield_12314020
+          '@key': com.atlassian.jira.plugins.jira-development-integration-plugin:devsummary
+          customfieldname: Development
+          customfieldvalues: null
+        - '@id': customfield_12313422
+          '@key': com.atlassian.jirafisheyeplugin:jobcheckbox
+          customfieldname: Enable Automatic Patch Review
+          customfieldvalues:
+            customfieldvalue: 'false'
+        - '@id': customfield_12310420
+          '@key': com.pyxis.greenhopper.jira:gh-global-rank
+          customfieldname: Global Rank
+          customfieldvalues:
+            customfieldvalue: '9223372036854775807'
+        - '@id': customfield_12312521
+          '@key': com.atlassian.jira.toolkit:LastCommentDate
+          customfieldname: Last public comment date
+          customfieldvalues: 6 years, 20 weeks, 4 days ago
+        - '@id': customfield_12311820
+          '@key': com.pyxis.greenhopper.jira:gh-lexo-rank
+          customfieldname: Rank
+          customfieldvalues:
+            customfieldvalue: '0|yi0y3k:'
+        - '@id': customfield_12310920
+          '@key': com.pyxis.greenhopper.jira:gh-global-rank
+          customfieldname: Rank (Obsolete)
+          customfieldvalues:
+            customfieldvalue: '9223372036854775807'
+      description: "<p>Originally reported on the Apache NiFi Slack.</p>\n\n<p>when\
+        \ groups are removed in ldap, it impacts access policies that had the group\
+        \ id.</p>\n\n<p><a href=\"https://apachenifi.slack.com/archives/C0L9UPWJZ/p1549493200163800\"\
+        \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\">https://apachenifi.slack.com/archives/C0L9UPWJZ/p1549493200163800</a></p>\n\
+        \n<p>This relates to <a href=\"https://issues.apache.org/jira/browse/NIFI-5948\"\
+        \ title=\"Cannot list users when a ldap user that belongs to a group is deleted\"\
+        \ class=\"issue-link\" data-issue-key=\"NIFI-5948\"><del>NIFI-5948</del></a>.</p>\n\
+        \n<p>Steps to reproduce:</p>\n<ol>\n\t<li>Configure NiFi to use the LDAP\_\
+        UserGroupProvider.</li>\n\t<li>Then in Nifi, using the UI, create some access\
+        \ policies that contain the LDAP groups.</li>\n\t<li>Delete groups from LDAP\
+        \ or change the NiFi LdapUserGroupProvider to use a different group search\
+        \ base/filter such that a subset of groups are returned, and at least one\
+        \ group that belongs to an access policy is no longer synced from ldap.</li>\n\
+        \t<li>Go to buger menu -&gt; users as observe an NPE. stack trace below</li>\n\
+        </ol>\n\n\n<p>The only way to fix this problem\_is to delete the association\
+        \ of the access policy -&gt; group\_in the file: authorizations.xml.</p>\n\
+        \n<p><ins><b>Stack trace:</b></ins></p>\n\n<p>\_</p>\n<div class=\"preformatted\
+        \ panel\" style=\"border-width: 1px;\"><div class=\"preformattedContent panelContent\"\
+        >\n<pre>2019-02-06 22:42:46,373 ERROR [NiFi Web Server-41682] o.a.nifi.web.api.config.ThrowableMapper\
+        \ An unexpected error has occurred: java.lang.NullPointerException. Returning\
+        \ Internal Server Error response.\njava.lang.NullPointerException: null\n\
+        at org.apache.nifi.web.dao.impl.StandardPolicyBasedAuthorizerDAO.lambda$null$2(StandardPolicyBasedAuthorizerDAO.java:285)\n\
+        at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:174)\n\
+        at java.util.HashMap$KeySpliterator.forEachRemaining(HashMap.java:1553)\n\
+        at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)\n\
+        at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)\n\
+        at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)\n\
+        at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)\n\
+        at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)\n\
+        at org.apache.nifi.web.dao.impl.StandardPolicyBasedAuthorizerDAO.lambda$getAccessPoliciesForUser$3(StandardPolicyBasedAuthorizerDAO.java:285)\n\
+        at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:174)\n\
+        at java.util.HashMap$KeySpliterator.forEachRemaining(HashMap.java:1553)\n\
+        at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)\n\
+        at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)\n\
+        at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)\n\
+        at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)\n\
+        at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)\n\
+        at org.apache.nifi.web.dao.impl.StandardPolicyBasedAuthorizerDAO.getAccessPoliciesForUser(StandardPolicyBasedAuthorizerDAO.java:287)\n\
+        at org.apache.nifi.web.dao.impl.StandardPolicyBasedAuthorizerDAO$$FastClassBySpringCGLIB$$ea190383.invoke(&lt;generated&gt;)\n\
+        at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)\n\
+        at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:738)\n\
+        at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)\n\
+        at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)\n\
+        at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)\n\
+        at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:673)\n\
+        at org.apache.nifi.web.dao.impl.StandardPolicyBasedAuthorizerDAO$$EnhancerBySpringCGLIB$$9bc4b502.getAccessPoliciesForUser(&lt;generated&gt;)\n\
+        at org.apache.nifi.web.StandardNiFiServiceFacade.createUserEntity(StandardNiFiServiceFacade.java:3285)\n\
+        at org.apache.nifi.web.StandardNiFiServiceFacade.lambda$getUsers$163(StandardNiFiServiceFacade.java:3276)\n\
+        at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)\n\
+        at java.util.HashMap$KeySpliterator.forEachRemaining(HashMap.java:1553)\n\
+        at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)\n\
+        at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)\n\
+        at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)\n\
+        at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)\n\
+        at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)\n\
+        at org.apache.nifi.web.StandardNiFiServiceFacade.getUsers(StandardNiFiServiceFacade.java:3277)\n\
+        at org.apache.nifi.web.StandardNiFiServiceFacade$$FastClassBySpringCGLIB$$358780e0.invoke(&lt;generated&gt;)\n\
+        at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)\n\
+        at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:738)\n\
+        at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)\n\
+        at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:85)\n\
+        at org.apache.nifi.web.NiFiServiceFacadeLock.proceedWithReadLock(NiFiServiceFacadeLock.java:155)\n\
+        at org.apache.nifi.web.NiFiServiceFacadeLock.getLock(NiFiServiceFacadeLock.java:120)\n\
+        at sun.reflect.GeneratedMethodAccessor219.invoke(Unknown Source)\nat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\
+        at java.lang.reflect.Method.invoke(Method.java:498)\nat org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:629)\n\
+        at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:618)\n\
+        at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:70)\n\
+        at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)\n\
+        at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)\n\
+        at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)\n\
+        at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:673)\n\
+        at org.apache.nifi.web.StandardNiFiServiceFacade$$EnhancerBySpringCGLIB$$c5908f19.getUsers(&lt;generated&gt;)\n\
+        at org.apache.nifi.web.api.TenantsResource.getUsers(TenantsResource.java:304)\n\
+        ...</pre>\n</div></div>"
+      due: null
+      environment: null
+      fixVersion: 1.9.0
+      issuelinks:
+        issuelinktype:
+        - '@id': '10020'
+          inwardlinks:
+            '@description': is cloned by
+            issuelink:
+              issuekey:
+                '#text': NIFI-6021
+                '@id': '13215561'
+          name: Cloners
+        - '@id': '12310000'
+          inwardlinks:
+            '@description': is duplicated by
+            issuelink:
+              issuekey:
+                '#text': NIFI-6021
+                '@id': '13215561'
+          name: Duplicate
+        - '@id': '10030'
+          inwardlinks:
+            '@description': is related to
+            issuelink:
+              issuekey:
+                '#text': NIFIREG-225
+                '@id': '13215562'
+          name: Reference
+          outwardlinks:
+            '@description': relates to
+            issuelink:
+              issuekey:
+                '#text': NIFI-5948
+                '@id': '13208838'
+      key:
+        '#text': NIFI-6020
+        '@id': '13215530'
+      labels: null
+      link: https://issues.apache.org/jira/browse/NIFI-6020
+      priority:
+        '#text': Major
+        '@iconUrl': https://issues.apache.org/jira/images/icons/priorities/major.svg
+        '@id': '3'
+      progress:
+        '@percentage': '100'
+        currentProgress:
+          row:
+          - '@backgroundColor': '#51a825'
+            '@percentage': '100'
+          - '@backgroundColor': '#ec8e00'
+            '@percentage': '0'
+        originalProgress:
+          row:
+          - '@backgroundColor': '#89afd7'
+            '@percentage': '0'
+          - '@backgroundColor': transparent
+            '@percentage': '100'
+      project:
+        '#text': Apache NiFi
+        '@id': '12316020'
+        '@key': NIFI
+      reporter:
+        '#text': Kevin Doran
+        '@username': kdoran
+      resolution:
+        '#text': Fixed
+        '@id': '1'
+      resolved: Wed, 13 Feb 2019 21:04:22 +0000
+      status:
+        '#text': Resolved
+        '@description': A resolution has been taken, and it is awaiting verification
+          by reporter. From here issues are either reopened, or are closed.
+        '@iconUrl': https://issues.apache.org/jira/images/icons/statuses/resolved.png
+        '@id': '5'
+      statusCategory:
+        '@colorName': green
+        '@id': '3'
+        '@key': done
+      subtasks: null
+      summary: Cannot list users or policies when an access policy contains a group
+        that is deleted
+      timeestimate:
+        '#text': 0h
+        '@seconds': '0'
+      timespent:
+        '#text': 50m
+        '@seconds': '3000'
+      title: '[NIFI-6020] Cannot list users or policies when an access policy contains
+        a group that is deleted'
+      type:
+        '#text': Bug
+        '@iconUrl': https://issues.apache.org/jira/secure/viewavatar?size=xsmall&avatarId=21133&avatarType=issuetype
+        '@id': '1'
+      updated: Sat, 2 Mar 2019 12:18:22 +0000
+      version:
+      - 1.5.0
+      - 1.6.0
+      - 1.7.0
+      - 1.8.0
+      - 1.7.1
+      votes: '0'
+      watches: '3'
+    language: en-uk
+    link: https://issues.apache.org/jira
+    title: ASF JIRA

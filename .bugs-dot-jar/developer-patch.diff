@@ -1,0 +1,50 @@
+diff --git a/nifi-nar-bundles/nifi-framework-bundle/nifi-framework/nifi-web/nifi-web-api/src/main/java/org/apache/nifi/web/dao/impl/StandardPolicyBasedAuthorizerDAO.java b/nifi-nar-bundles/nifi-framework-bundle/nifi-framework/nifi-web/nifi-web-api/src/main/java/org/apache/nifi/web/dao/impl/StandardPolicyBasedAuthorizerDAO.java
+index 2a2279e84d..8173a9bff7 100644
+--- a/nifi-nar-bundles/nifi-framework-bundle/nifi-framework/nifi-web/nifi-web-api/src/main/java/org/apache/nifi/web/dao/impl/StandardPolicyBasedAuthorizerDAO.java
++++ b/nifi-nar-bundles/nifi-framework-bundle/nifi-framework/nifi-web/nifi-web-api/src/main/java/org/apache/nifi/web/dao/impl/StandardPolicyBasedAuthorizerDAO.java
+@@ -282,7 +282,10 @@ public class StandardPolicyBasedAuthorizerDAO implements AccessPolicyDAO, UserGr
+                     }
+ 
+                     // policy contains a group with the user
+-                    return !p.getGroups().stream().filter(g -> userGroupProvider.getGroup(g).getUsers().contains(userId)).collect(Collectors.toSet()).isEmpty();
++                    return p.getGroups().stream().anyMatch(g -> {
++                        final Group group = userGroupProvider.getGroup(g);
++                        return group != null && group.getUsers().contains(userId);
++                    });
+                 })
+                 .collect(Collectors.toSet());
+     }
+diff --git a/nifi-nar-bundles/nifi-framework-bundle/nifi-framework/nifi-web/nifi-web-api/src/test/groovy/org/apache/nifi/web/dao/impl/StandardPolicyBasedAuthorizerDAOSpec.groovy b/nifi-nar-bundles/nifi-framework-bundle/nifi-framework/nifi-web/nifi-web-api/src/test/groovy/org/apache/nifi/web/dao/impl/StandardPolicyBasedAuthorizerDAOSpec.groovy
+index 5a4cc3b76c..13cd90d2e6 100644
+--- a/nifi-nar-bundles/nifi-framework-bundle/nifi-framework/nifi-web/nifi-web-api/src/test/groovy/org/apache/nifi/web/dao/impl/StandardPolicyBasedAuthorizerDAOSpec.groovy
++++ b/nifi-nar-bundles/nifi-framework-bundle/nifi-framework/nifi-web/nifi-web-api/src/test/groovy/org/apache/nifi/web/dao/impl/StandardPolicyBasedAuthorizerDAOSpec.groovy
+@@ -156,6 +156,29 @@ class StandardPolicyBasedAuthorizerDAOSpec extends Specification {
+                 .action(RequestAction.WRITE).build() | _
+     }
+ 
++    @Unroll
++    def "GetAccessPoliciesForUser: access policy contains identifier of missing group"() {
++        given:
++        def authorizer = mockAuthorizer()
++        def dao = new StandardPolicyBasedAuthorizerDAO(authorizer)
++        def group1 = new Group.Builder().identifier("group-id-1").name("Group One").addUser("user-id-1").build()
++        def apBuilder = new AccessPolicy.Builder().resource('/fake/resource').action(RequestAction.WRITE)
++        def ap1 = apBuilder.identifier('policy-id-1').addUser('user-id-1').build()
++        def ap2 = apBuilder.identifier('policy-id-2').clearUsers().addGroup('group-id-1').build()
++        def ap3 = apBuilder.identifier('policy-id-3').clearUsers().clearGroups().addGroup('id-of-missing-group').build()
++        def accessPolicies = new HashSet([ap1, ap2, ap3])
++
++        when:
++        def result = dao.getAccessPoliciesForUser('user-id-1')
++
++        then:
++        1 * authorizer.getAccessPolicies() >> accessPolicies
++        1 * authorizer.getGroup('group-id-1') >> group1
++        1 * authorizer.getGroup('id-of-missing-group') >> null
++        0 * _
++        assert result?.equals(new HashSet<AccessPolicy>([ap1, ap2]))
++    }
++
+     @Unroll
+     def "GetAccessPolicy: failure"() {
+         given:
