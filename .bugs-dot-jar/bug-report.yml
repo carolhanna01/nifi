@@ -1,0 +1,175 @@
+rss:
+  '@version': '0.92'
+  channel:
+    build-info:
+      build-date: 22-06-2022
+      build-number: '820010'
+      version: 8.20.10
+    description: This file is an XML representation of an issue
+    item:
+      aggregateprogress:
+        '@percentage': '100'
+        currentProgress:
+          row:
+          - '@backgroundColor': '#51a825'
+            '@percentage': '100'
+          - '@backgroundColor': '#ec8e00'
+            '@percentage': '0'
+        originalProgress:
+          row:
+          - '@backgroundColor': '#89afd7'
+            '@percentage': '0'
+          - '@backgroundColor': transparent
+            '@percentage': '100'
+      assignee:
+        '#text': Matt Burgess
+        '@username': mattyb149
+      attachments: null
+      comments:
+        comment:
+        - '#text': '<p>Commit bb699e749755432837b3a4132372f635d7480be3 in nifi''s
+            branch refs/heads/master from Matt Burgess<br/>
+
+            [ <a href="https://gitbox.apache.org/repos/asf?p=nifi.git;h=bb699e7" class="external-link"
+            target="_blank" rel="nofollow noopener">https://gitbox.apache.org/repos/asf?p=nifi.git;h=bb699e7</a>
+            ]</p>
+
+
+            <p><a href="https://issues.apache.org/jira/browse/NIFI-7017" title="PrometheusReportingTask
+            does not report nested process group status" class="issue-link" data-issue-key="NIFI-7017"><del>NIFI-7017</del></a>:
+            This closes #3988. Fixed PrometheusReportingTask for nested PG status</p>
+
+
+            <p>Signed-off-by: Joe Witt &lt;joewitt@apache.org&gt;</p>'
+          '@author': jira-bot
+          '@created': Wed, 15 Jan 2020 13:28:10 +0000
+          '@id': '17015972'
+        - '#text': <p>+1 merged to master</p>
+          '@author': joewitt
+          '@created': Wed, 15 Jan 2020 13:32:42 +0000
+          '@id': '17015977'
+      component: Extensions
+      created: Tue, 14 Jan 2020 18:05:59 +0000
+      customfields:
+        customfield:
+        - '@id': customfield_12310310
+          '@key': com.atlassian.jira.toolkit:attachments
+          customfieldname: Attachment count
+          customfieldvalues:
+            customfieldvalue: '0.0'
+        - '@id': customfield_12314020
+          '@key': com.atlassian.jira.plugins.jira-development-integration-plugin:devsummary
+          customfieldname: Development
+          customfieldvalues: null
+        - '@id': customfield_12313422
+          '@key': com.atlassian.jirafisheyeplugin:jobcheckbox
+          customfieldname: Enable Automatic Patch Review
+          customfieldvalues:
+            customfieldvalue: 'false'
+        - '@id': customfield_12310420
+          '@key': com.pyxis.greenhopper.jira:gh-global-rank
+          customfieldname: Global Rank
+          customfieldvalues:
+            customfieldvalue: '9223372036854775807'
+        - '@id': customfield_12312521
+          '@key': com.atlassian.jira.toolkit:LastCommentDate
+          customfieldname: Last public comment date
+          customfieldvalues: 5 years, 27 weeks ago
+        - '@id': customfield_12311820
+          '@key': com.pyxis.greenhopper.jira:gh-lexo-rank
+          customfieldname: Rank
+          customfieldvalues:
+            customfieldvalue: '0|z0ai7k:'
+        - '@id': customfield_12310920
+          '@key': com.pyxis.greenhopper.jira:gh-global-rank
+          customfieldname: Rank (Obsolete)
+          customfieldvalues:
+            customfieldvalue: '9223372036854775807'
+      description: '<p>The clear() command added in <a href="https://issues.apache.org/jira/browse/NIFI-6715"
+        title="Metrics of removed/renamed components continues to remain in PrometheusReportingTask"
+        class="issue-link" data-issue-key="NIFI-6715"><del>NIFI-6715</del></a> causes
+        the registry to be reset on every call to createNiFiMetrics. In the case of
+        nested process groups this method is a recursive call, so the registry keeps
+        getting cleared except for the last visited process group.</p>
+
+
+        <p>The clear() should only be done when createNiFiMetrics is called on the
+        root process group, in order to clean up the registry before adding all the
+        components'' metrics.</p>'
+      due: null
+      environment: null
+      fixVersion: 1.11.0
+      issuelinks:
+        issuelinktype:
+          '@id': '12310560'
+          inwardlinks:
+            '@description': is caused by
+            issuelink:
+              issuekey:
+                '#text': NIFI-6715
+                '@id': '13258986'
+          name: Problem/Incident
+      key:
+        '#text': NIFI-7017
+        '@id': '13279413'
+      labels: null
+      link: https://issues.apache.org/jira/browse/NIFI-7017
+      priority:
+        '#text': Major
+        '@iconUrl': https://issues.apache.org/jira/images/icons/priorities/major.svg
+        '@id': '3'
+      progress:
+        '@percentage': '100'
+        currentProgress:
+          row:
+          - '@backgroundColor': '#51a825'
+            '@percentage': '100'
+          - '@backgroundColor': '#ec8e00'
+            '@percentage': '0'
+        originalProgress:
+          row:
+          - '@backgroundColor': '#89afd7'
+            '@percentage': '0'
+          - '@backgroundColor': transparent
+            '@percentage': '100'
+      project:
+        '#text': Apache NiFi
+        '@id': '12316020'
+        '@key': NIFI
+      reporter:
+        '#text': Matt Burgess
+        '@username': mattyb149
+      resolution:
+        '#text': Fixed
+        '@id': '1'
+      resolved: Wed, 15 Jan 2020 13:32:42 +0000
+      status:
+        '#text': Resolved
+        '@description': A resolution has been taken, and it is awaiting verification
+          by reporter. From here issues are either reopened, or are closed.
+        '@iconUrl': https://issues.apache.org/jira/images/icons/statuses/resolved.png
+        '@id': '5'
+      statusCategory:
+        '@colorName': green
+        '@id': '3'
+        '@key': done
+      subtasks: null
+      summary: PrometheusReportingTask does not report nested process group status
+      timeestimate:
+        '#text': 0h
+        '@seconds': '0'
+      timespent:
+        '#text': 20m
+        '@seconds': '1200'
+      title: '[NIFI-7017] PrometheusReportingTask does not report nested process group
+        status'
+      type:
+        '#text': Bug
+        '@iconUrl': https://issues.apache.org/jira/secure/viewavatar?size=xsmall&avatarId=21133&avatarType=issuetype
+        '@id': '1'
+      updated: Wed, 15 Jan 2020 13:32:42 +0000
+      votes: '0'
+      watches: '2'
+    language: en-uk
+    link: https://issues.apache.org/jira
+    title: ASF JIRA
