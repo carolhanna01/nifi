@@ -1,0 +1,589 @@
+rss:
+  '@version': '0.92'
+  channel:
+    build-info:
+      build-date: 22-06-2022
+      build-number: '820010'
+      version: 8.20.10
+    description: This file is an XML representation of an issue
+    item:
+      aggregateprogress:
+        '@percentage': '100'
+        currentProgress:
+          row:
+          - '@backgroundColor': '#51a825'
+            '@percentage': '100'
+          - '@backgroundColor': '#ec8e00'
+            '@percentage': '0'
+        originalProgress:
+          row:
+          - '@backgroundColor': '#89afd7'
+            '@percentage': '0'
+          - '@backgroundColor': transparent
+            '@percentage': '100'
+      assignee:
+        '#text': "Zolt\xE1n Korn\xE9l T\xF6r\xF6k"
+        '@username': taz1988
+      attachments: null
+      comments:
+        comment:
+        - '#text': <p>I deployed the fix to my cluster, after the change the problem
+            dissapeared</p>
+          '@author': taz1988
+          '@created': Thu, 16 Nov 2023 23:23:15 +0000
+          '@id': '17786967'
+        - '#text': '<p>Thanks for summarizing this issue <a href="https://issues.apache.org/jira/secure/ViewProfile.jspa?name=taz1988"
+            class="user-hover" rel="taz1988">taz1988</a>.</p>
+
+
+            <p>Do you know if the <tt>h2</tt> protocol was enabled for the HTTP protocols
+            property in nifi.properties? The HTTP/2 protocol uses binary for headers,
+            and as a result, the header names can be reported as lowercase when HTTP/2
+            is negotiated.</p>'
+          '@author': exceptionfactory
+          '@created': Fri, 17 Nov 2023 00:08:58 +0000
+          '@id': '17786987'
+        - '#text': '<p>Commit 63364687d8bbe2af2d0031f745ca3c61144f8b4f in nifi''s
+            branch refs/heads/main from Zoltan Kornel Torok<br/>
+
+            [ <a href="https://gitbox.apache.org/repos/asf?p=nifi.git;h=63364687d8"
+            class="external-link" target="_blank" rel="nofollow noopener">https://gitbox.apache.org/repos/asf?p=nifi.git;h=63364687d8</a>
+            ]</p>
+
+
+            <p><a href="https://issues.apache.org/jira/browse/NIFI-12383" title="GZipException
+            occur during cluster replication, when the original request contains &quot;accept-encoding&quot;
+            header with lowercase" class="issue-link" data-issue-key="NIFI-12383"><del>NIFI-12383</del></a>
+            Replication client should handle accept encoding with lowercase</p>
+
+
+            <p>Signed-off-by: Bence Simon &lt;bsimon@apache.org&gt;<br/>
+
+            This closes #8043</p>'
+          '@author': jira-bot
+          '@created': Fri, 17 Nov 2023 07:02:24 +0000
+          '@id': '17787062'
+        - '#text': '<p><a href="https://issues.apache.org/jira/secure/ViewProfile.jspa?name=exceptionfactory"
+            class="user-hover" rel="exceptionfactory">exceptionfactory</a>,<br/>
+
+            As I see &lt;nifi.web.https.application.protocols&gt;h2 http/1.1&lt;/nifi.web.https.application.protocols&gt;
+            is the default, so I guess that means yes? (I didn''t override this value)</p>'
+          '@author': taz1988
+          '@created': Fri, 17 Nov 2023 08:58:55 +0000
+          '@id': '17787089'
+        - '#text': '<p>Commit 4e38e28d050d4ddcf766860ef820cb79aa8cfbc7 in nifi''s
+            branch refs/heads/support/nifi-1.x from Zoltan Kornel Torok<br/>
+
+            [ <a href="https://gitbox.apache.org/repos/asf?p=nifi.git;h=4e38e28d05"
+            class="external-link" target="_blank" rel="nofollow noopener">https://gitbox.apache.org/repos/asf?p=nifi.git;h=4e38e28d05</a>
+            ]</p>
+
+
+            <p><a href="https://issues.apache.org/jira/browse/NIFI-12383" title="GZipException
+            occur during cluster replication, when the original request contains &quot;accept-encoding&quot;
+            header with lowercase" class="issue-link" data-issue-key="NIFI-12383"><del>NIFI-12383</del></a>
+            Replication client should handle accept encoding with lowercase</p>
+
+
+            <p>Signed-off-by: Bence Simon &lt;bsimon@apache.org&gt;<br/>
+
+            This closes #8043</p>'
+          '@author': jira-bot
+          '@created': Fri, 17 Nov 2023 10:00:10 +0000
+          '@id': '17787116'
+        - '#text': '<p>Thanks for the reply <a href="https://issues.apache.org/jira/secure/ViewProfile.jspa?name=taz1988"
+            class="user-hover" rel="taz1988">taz1988</a>.</p>
+
+
+            <p>The <tt>h2</tt> protocol is now the default on the main branch, but
+            it was not the default for NiFi 1, so that is why I asked.</p>
+
+
+            <p>The change itself is simple enough, so it is not so much of a concern,
+            but it would be useful to know the NiFi version and configured property
+            value if you have that information available for reference.</p>'
+          '@author': exceptionfactory
+          '@created': Fri, 17 Nov 2023 14:49:14 +0000
+          '@id': '17787241'
+        - '#text': <p>Oh I see. It was a nifi-2.0 cluster what I played with where
+            this error occured</p>
+          '@author': taz1988
+          '@created': Fri, 17 Nov 2023 15:40:42 +0000
+          '@id': '17787274'
+        - '#text': '<p>Here is the content of nifi properties (ommit some sensitive
+            values)</p>
+
+            <div class="code panel" style="border-width: 1px;"><div class="codeContent
+            panelContent">
+
+            <pre class="code-java">
+
+            nifi.administrative.yield.duration=30 sec
+
+            nifi.analytics.connection.model.implementation=org.apache.nifi.controller.status.analytics.models.OrdinaryLeastSquares
+
+            nifi.analytics.connection.model.score.name=rSquared
+
+            nifi.analytics.connection.model.score.threshold=.90
+
+            nifi.analytics.predict.enabled=<span class="code-keyword">true</span>
+
+            nifi.analytics.predict.interval=3 mins
+
+            nifi.analytics.query.interval=5 mins
+
+            nifi.authorizer.configuration.file=/<span class="code-keyword">var</span>/run/../authorizers.xml
+
+            nifi.bored.yield.duration=10 millis
+
+            nifi.cluster.firewall.file=
+
+            nifi.cluster.flow.election.max.candidates=3
+
+            nifi.cluster.flow.election.max.wait.time=1 mins
+
+            nifi.cluster.is.node=<span class="code-keyword">true</span>
+
+            nifi.cluster.load.balance.comms.timeout=30 sec
+
+            nifi.cluster.load.balance.connections.per.node=1
+
+            nifi.cluster.load.balance.host=
+
+            nifi.cluster.load.balance.max.thread.count=8
+
+            nifi.cluster.load.balance.port=6342
+
+            nifi.cluster.node.address=*****
+
+            nifi.cluster.node.connection.timeout=30 sec
+
+            nifi.cluster.node.event.history.size=25
+
+            nifi.cluster.node.max.concurrent.requests=100
+
+            nifi.cluster.node.protocol.max.threads=50
+
+            nifi.cluster.node.protocol.port=9088
+
+            nifi.cluster.node.read.timeout=30 sec
+
+            nifi.cluster.protocol.heartbeat.interval=5 sec
+
+            nifi.cluster.protocol.is.secure=<span class="code-keyword">true</span>
+
+            nifi.components.status.repository.buffer.size=1440
+
+            nifi.components.status.repository.implementation=org.apache.nifi.controller.status.history.VolatileComponentStatusRepository
+
+            nifi.components.status.snapshot.frequency=1 min
+
+            nifi.content.claim.max.appendable.size=50 KB
+
+            nifi.content.repository.always.sync=<span class="code-keyword">false</span>
+
+            nifi.content.repository.archive.enabled=<span class="code-keyword">true</span>
+
+            nifi.content.repository.archive.max.retention.period=30 days
+
+            nifi.content.repository.archive.max.usage.percentage=70%
+
+            nifi.content.repository.directory.<span class="code-keyword">default</span>=*****
+
+            nifi.content.repository.implementation=org.apache.nifi.controller.repository.FileSystemRepository
+
+            nifi.content.viewer.url=../nifi-content-viewer/
+
+            nifi.database.directory==*****
+
+            nifi.documentation.working.directory==*****
+
+            nifi.flow.analysis.background.task.schedule=5 mins
+
+            nifi.flow.configuration.archive.dir==*****
+
+            nifi.flow.configuration.archive.enabled=<span class="code-keyword">true</span>
+
+            nifi.flow.configuration.archive.max.storage=500 MB
+
+            nifi.flow.configuration.archive.max.time=30 days
+
+            nifi.flow.configuration.file=****flow.json.gz
+
+            nifi.flow.configuration.json.file=****flow.json.gz
+
+            nifi.flowcontroller.autoResumeState=<span class="code-keyword">true</span>
+
+            nifi.flowcontroller.graceful.shutdown.period=10 sec
+
+            nifi.flowfile.repository.always.sync=<span class="code-keyword">false</span>
+
+            nifi.flowfile.repository.checkpoint.interval=2 mins
+
+            nifi.flowfile.repository.directory==****flowfile-repo
+
+            nifi.flowfile.repository.implementation=org.apache.nifi.controller.repository.WriteAheadFlowFileRepository
+
+            nifi.flowfile.repository.partitions=256
+
+            nifi.flowfile.repository.wal.implementation=org.apache.nifi.wali.SequentialAccessWriteAheadLog
+
+            nifi.flowservice.writedelay.interval=500 ms
+
+            nifi.h2.url.append=;LOCK_TIMEOUT=25000;WRITE_DELAY=0;AUTO_SERVER=FALSE
+
+            nifi.initial.admin.identity=
+
+            nifi.kerberos.krb5.file=/etc/krb5.conf
+
+            nifi.kerberos.service.keytab.location==****b
+
+            nifi.kerberos.service.principal=n=****K
+
+            nifi.login.identity.provider.configuration.file==****/login-identity-providers.xml
+
+            nifi.monitor.<span class="code-object">long</span>.running.task.schedule=
+
+            nifi.monitor.<span class="code-object">long</span>.running.task.threshold=
+
+            nifi.provenance.repository.always.sync=<span class="code-keyword">false</span>
+
+            nifi.provenance.repository.buffer.size=100000
+
+            nifi.provenance.repository.compress.on.rollover=<span class="code-keyword">true</span>
+
+            nifi.provenance.repository.concurrent.merge.threads=2
+
+            nifi.provenance.repository.directory.<span class="code-keyword">default</span>==****
+
+            nifi.provenance.repository.encryption.key.provider.location=
+
+            nifi.provenance.repository.encryption.key.provider.password=
+
+            nifi.provenance.repository.implementation=org.apache.nifi.provenance.WriteAheadProvenanceRepository
+
+            nifi.provenance.repository.index.shard.size=4 GB
+
+            nifi.provenance.repository.index.threads=2
+
+            nifi.provenance.repository.indexed.attributes=
+
+            nifi.provenance.repository.indexed.fields=EventType, FlowFileUUID, Filename,
+            ProcessorID, Relationship
+
+            nifi.provenance.repository.max.attribute.length=65536
+
+            nifi.provenance.repository.max.storage.size=150 GB
+
+            nifi.provenance.repository.max.storage.time=30 days
+
+            nifi.provenance.repository.query.threads=2
+
+            nifi.provenance.repository.rollover.size=1 GB
+
+            nifi.provenance.repository.rollover.time=10 mins
+
+            nifi.python.extensions.source.directory.<span class="code-keyword">default</span>==****
+
+            nifi.python.framework.source.directory==****
+
+            nifi.python.logs.directory==****
+
+            nifi.python.max.processes=100
+
+            nifi.python.max.processes.per.extension.type=10
+
+            nifi.python.working.directory==****
+
+            nifi.queue.backpressure.count=10000
+
+            nifi.queue.backpressure.size=1 GB
+
+            nifi.queue.swap.threshold=20000
+
+            nifi.remote.contents.cache.expiration=30 secs
+
+            nifi.remote.input.host==****
+
+            nifi.remote.input.http.enabled=<span class="code-keyword">true</span>
+
+            nifi.remote.input.http.transaction.ttl=30 sec
+
+            nifi.remote.input.secure=<span class="code-keyword">true</span>
+
+            nifi.repository.encryption.key.id=
+
+            nifi.repository.encryption.key.provider=
+
+            nifi.repository.encryption.key.provider.keystore.location=
+
+            nifi.repository.encryption.key.provider.keystore.password=
+
+            nifi.repository.encryption.protocol.version=
+
+            nifi.security.allow.anonymous.authentication=<span class="code-keyword">false</span>
+
+            nifi.security.autoreload.enabled=<span class="code-keyword">false</span>
+
+            nifi.security.autoreload.interval=10 secs
+
+            nifi.security.identity.mapping.pattern.dn=^CN=(.*?), .+$
+
+            nifi.security.identity.mapping.transform.dn=NONE
+
+            nifi.security.identity.mapping.value.dn=$1
+
+            nifi.security.ocsp.responder.certificate=
+
+            nifi.security.ocsp.responder.url=
+
+            nifi.security.user.authorizer=ranger-provider
+
+            nifi.security.user.knox.audiences=
+
+            nifi.security.user.knox.cookieName=hadoop-jwt
+
+            nifi.security.user.login.identity.provider=kerberos-provider
+
+            nifi.security.user.oidc.client.id=
+
+            nifi.security.user.oidc.client.secret=
+
+            nifi.security.user.oidc.connect.timeout=5 secs
+
+            nifi.security.user.oidc.discovery.url=
+
+            nifi.security.user.oidc.preferred.jwsalgorithm=
+
+            nifi.security.user.oidc.read.timeout=5 secs
+
+            nifi.sensitive.props.additional.keys=
+
+            nifi.sensitive.props.algorithm=NIFI_PBKDF2_AES_GCM_256
+
+            nifi.sensitive.props.key.<span class="code-keyword">protected</span>=aes/gcm/256
+
+            nifi.sensitive.props.provider=BC
+
+            nifi.state.management.provider.cluster=zk-provider
+
+            nifi.state.management.provider.local=local-provider
+
+            nifi.swap.manager.implementation=org.apache.nifi.controller.FileSystemSwapManager
+
+            nifi.ui.autorefresh.interval=30 sec
+
+            nifi.ui.banner.text=
+
+            nifi.ui.knox.url=****
+
+            nifi.web.http.host=
+
+            nifi.web.http.network.<span class="code-keyword">interface</span>.<span
+            class="code-keyword">default</span>=
+
+            nifi.web.http.port=
+
+            nifi.web.https.ciphersuites.exclude=
+
+            nifi.web.https.ciphersuites.include=
+
+            nifi.web.https.host=****
+
+            nifi.web.https.network.<span class="code-keyword">interface</span>.<span
+            class="code-keyword">default</span>=
+
+            nifi.web.https.port=8443
+
+            nifi.web.jetty.threads=200
+
+            nifi.web.max.access.token.requests.per.second=25
+
+            nifi.web.max.header.size=16 KB
+
+            nifi.web.proxy.context.path=****
+
+            nifi.web.proxy.globals.path=
+
+            nifi.web.proxy.host=
+
+            nifi.web.request.log.format=%{client}a - %u %t <span class="code-quote">"%r"</span>
+            %s %O <span class="code-quote">"%{Referer}i"</span> <span class="code-quote">"%{User-Agent}i"</span>
+
+            nifi.zookeeper.auth.type=
+
+            nifi.zookeeper.client.secure=<span class="code-keyword">true</span>
+
+            nifi.zookeeper.connect.string=****
+
+            nifi.zookeeper.connect.timeout=60 secs
+
+            nifi.zookeeper.jute.maxbuffer=1048575
+
+            nifi.zookeeper.kerberos.removeHostFromPrincipal=
+
+            nifi.zookeeper.kerberos.removeRealmFromPrincipal=
+
+            nifi.zookeeper.root.node=/BASE
+
+            </pre>
+
+            </div></div>
+
+            <p>It was a cluster with 3 node and a knox gateway is used to reach nifi</p>'
+          '@author': taz1988
+          '@created': Fri, 17 Nov 2023 15:47:16 +0000
+          '@id': '17787276'
+        - '#text': <p>Thanks for the confirmation!</p>
+          '@author': exceptionfactory
+          '@created': Fri, 17 Nov 2023 16:39:56 +0000
+          '@id': '17787300'
+      created: Thu, 16 Nov 2023 23:20:13 +0000
+      customfields:
+        customfield:
+        - '@id': customfield_12310310
+          '@key': com.atlassian.jira.toolkit:attachments
+          customfieldname: Attachment count
+          customfieldvalues:
+            customfieldvalue: '0.0'
+        - '@id': customfield_12314020
+          '@key': com.atlassian.jira.plugins.jira-development-integration-plugin:devsummary
+          customfieldname: Development
+          customfieldvalues: null
+        - '@id': customfield_12313422
+          '@key': com.atlassian.jirafisheyeplugin:jobcheckbox
+          customfieldname: Enable Automatic Patch Review
+          customfieldvalues:
+            customfieldvalue: 'false'
+        - '@id': customfield_12310420
+          '@key': com.pyxis.greenhopper.jira:gh-global-rank
+          customfieldname: Global Rank
+          customfieldvalues:
+            customfieldvalue: '9223372036854775807'
+        - '@id': customfield_12312521
+          '@key': com.atlassian.jira.toolkit:LastCommentDate
+          customfieldname: Last public comment date
+          customfieldvalues: 1 year, 34 weeks, 4 days ago
+        - '@id': customfield_12311820
+          '@key': com.pyxis.greenhopper.jira:gh-lexo-rank
+          customfieldname: Rank
+          customfieldvalues:
+            customfieldvalue: '0|z1lo08:'
+        - '@id': customfield_12310920
+          '@key': com.pyxis.greenhopper.jira:gh-global-rank
+          customfieldname: Rank (Obsolete)
+          customfieldvalues:
+            customfieldvalue: '9223372036854775807'
+      description: "<p>I had a three node cluster with knox. </p>\n\n<p>Time to time\
+        \ an error occured in the nifi logs on this cluster:</p>\n<div class=\"code\
+        \ panel\" style=\"border-width: 1px;\"><div class=\"codeContent panelContent\"\
+        >\n<pre class=\"code-java\">\n2023-11-15 13:25:51,637 INFO org.apache.nifi.cluster.coordination.http.replication.ThreadPoolRequestReplicator:\
+        \ Received a status of 500 from xy:8443 <span class=\"code-keyword\">for</span>\
+        \ request PUT /nifi-api/process-groups/d2cedf64-018b-1000-0000-0000164a79fc\
+        \ when performing first stage of two-stage commit. The action will not occur.\
+        \ Node explanation: An unexpected error has occurred. Please check the logs\
+        \ <span class=\"code-keyword\">for</span> additional details.\n</pre>\n</div></div>\n\
+        \n<p>Also sometimes I got \"An unexpected error has occurred. Please check\
+        \ the logs for additional details.\" error on the UI too. After some investigation\
+        \ in I found the error in the logs:</p>\n<div class=\"code panel\" style=\"\
+        border-width: 1px;\"><div class=\"codeContent panelContent\">\n<pre class=\"\
+        code-java\">\n23-11-15 13:40:25,289 ERROR [NiFi Web Server-78] o.a.nifi.web.api.config.ThrowableMapper\
+        \ An unexpected error has occurred: java.util.zip.ZipException: Not in GZIP\
+        \ format. Returning Internal Server Error response.\njava.util.zip.ZipException:\
+        \ Not in GZIP format\n        at java.base/java.util.zip.GZIPInputStream.readHeader(GZIPInputStream.java:176)\n\
+        \        at java.base/java.util.zip.GZIPInputStream.&lt;init&gt;(GZIPInputStream.java:79)\n\
+        \        at java.base/java.util.zip.GZIPInputStream.&lt;init&gt;(GZIPInputStream.java:91)\n\
+        \        at org.glassfish.jersey.message.GZipEncoder.decode(GZipEncoder.java:49)\n\
+        \        at org.glassfish.jersey.spi.ContentEncoder.aroundReadFrom(ContentEncoder.java:100)\n\
+        \        at org.glassfish.jersey.message.internal.ReaderInterceptorExecutor.proceed(ReaderInterceptorExecutor.java:132)\n\
+        \        at org.glassfish.jersey.server.internal.MappableExceptionWrapperInterceptor.aroundReadFrom(MappableExceptionWrapperInterceptor.java:49)\n\
+        \        at org.glassfish.jersey.message.internal.ReaderInterceptorExecutor.proceed(ReaderInterceptorExecutor.java:132)\n\
+        \        at org.glassfish.jersey.message.internal.MessageBodyFactory.readFrom(MessageBodyFactory.java:1072)\n\
+        \        at org.glassfish.jersey.message.internal.InboundMessageContext.readEntity(InboundMessageContext.java:919)\n\
+        \        at org.glassfish.jersey.server.ContainerRequest.readEntity(ContainerRequest.java:290)\n\
+        \        at org.glassfish.jersey.server.internal.inject.EntityParamValueParamProvider$EntityValueSupplier.apply(EntityParamValueParamProvider.java:73)\n\
+        </pre>\n</div></div>\n\n<p>After many hours of debugging, I found out, that\
+        \ sometimes when I use the cluster via knox, some unknown reason the incoming\
+        \ \"Accept-Encoding\" come with all leters lowercase (which is valid, becase\
+        \ HTTP header is case insensitive - <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers\"\
+        \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers</a>).\
+        \ However OkHttpReplicationClient assume that the header is always \"Accept-Encoding\"\
+        \ (<a href=\"https://github.com/apache/nifi/blob/main/nifi-nar-bundles/nifi-framework-bundle/nifi-framework/nifi-framework-cluster/src/main/java/org/apache/nifi/cluster/coordination/http/replication/okhttp/OkHttpReplicationClient.java#L294\"\
+        \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\">https://github.com/apache/nifi/blob/main/nifi-nar-bundles/nifi-framework-bundle/nifi-framework/nifi-framework-cluster/src/main/java/org/apache/nifi/cluster/coordination/http/replication/okhttp/OkHttpReplicationClient.java#L294</a>\
+        \  and  <a href=\"https://github.com/apache/nifi/blob/main/nifi-commons/nifi-site-to-site-client/src/main/java/org/apache/nifi/remote/protocol/http/HttpHeaders.java#L25\"\
+        \ class=\"external-link\" target=\"_blank\" rel=\"nofollow noopener\">https://github.com/apache/nifi/blob/main/nifi-commons/nifi-site-to-site-client/src/main/java/org/apache/nifi/remote/protocol/http/HttpHeaders.java#L25</a>).\
+        \ Because of that, during replication the client not use gzip compression\
+        \ but when other node get the requests, the jetty read the original \"accept-encoding\"\
+        \ header and try to uncompress the inputstream, which lead to the above error.</p>\n\
+        \n<p>We need to add a few line code to the client to read the header case\
+        \ insensitivity</p>"
+      due: null
+      environment: null
+      fixVersion:
+      - 2.0.0-M1
+      - 1.25.0
+      key:
+        '#text': NIFI-12383
+        '@id': '13558312'
+      labels: null
+      link: https://issues.apache.org/jira/browse/NIFI-12383
+      priority:
+        '#text': Major
+        '@iconUrl': https://issues.apache.org/jira/images/icons/priorities/major.svg
+        '@id': '3'
+      progress:
+        '@percentage': '100'
+        currentProgress:
+          row:
+          - '@backgroundColor': '#51a825'
+            '@percentage': '100'
+          - '@backgroundColor': '#ec8e00'
+            '@percentage': '0'
+        originalProgress:
+          row:
+          - '@backgroundColor': '#89afd7'
+            '@percentage': '0'
+          - '@backgroundColor': transparent
+            '@percentage': '100'
+      project:
+        '#text': Apache NiFi
+        '@id': '12316020'
+        '@key': NIFI
+      reporter:
+        '#text': "Zolt\xE1n Korn\xE9l T\xF6r\xF6k"
+        '@username': taz1988
+      resolution:
+        '#text': Fixed
+        '@id': '1'
+      resolved: Fri, 17 Nov 2023 14:49:36 +0000
+      status:
+        '#text': Resolved
+        '@description': A resolution has been taken, and it is awaiting verification
+          by reporter. From here issues are either reopened, or are closed.
+        '@iconUrl': https://issues.apache.org/jira/images/icons/statuses/resolved.png
+        '@id': '5'
+      statusCategory:
+        '@colorName': green
+        '@id': '3'
+        '@key': done
+      subtasks: null
+      summary: GZipException occur during cluster replication, when the original request
+        contains "accept-encoding" header with lowercase
+      timeestimate:
+        '#text': 0h
+        '@seconds': '0'
+      timespent:
+        '#text': 1h
+        '@seconds': '3600'
+      title: '[NIFI-12383] GZipException occur during cluster replication, when the
+        original request contains "accept-encoding" header with lowercase'
+      type:
+        '#text': Bug
+        '@iconUrl': https://issues.apache.org/jira/secure/viewavatar?size=xsmall&avatarId=21133&avatarType=issuetype
+        '@id': '1'
+      updated: Fri, 17 Nov 2023 16:39:56 +0000
+      votes: '0'
+      watches: '3'
+    language: en-uk
+    link: https://issues.apache.org/jira
+    title: ASF JIRA
